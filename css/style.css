@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  background-color: white;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.header-logo-icon {
+  width: 100%;
+  height: 100px;
+  display: grid;
+  align-items: center;
+  justify-content: space-evenly;
+  grid-template-rows: 1fr;
+  grid-auto-flow: column;
+}
+.header-logo-icon .logo-set {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-rows: 1fr;
+  grid-auto-flow: column;
+}
+.header-logo-icon .logo-set .img-map {
+  margin-left: 10px;
+}
+.header-logo-icon .contact {
+  width: 176px;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-auto-flow: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-logo-icon .contact .contact-text {
+  font-size: 14px;
+  color: #282828;
+}
+
+.header-consult {
+  width: 100%;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-auto-flow: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #F2F2F2;
+}
+.header-consult .block-num-consult {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-flow: row;
+}
+.header-consult .num {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+}
+.header-consult .consult {
+  margin: 0;
+  font-size: 16px;
+}
+.header-consult .btn-header-consult {
+  margin-left: 5%;
+  width: 273px;
+  height: 51px;
+  border-radius: 10px;
+  background-color: #39B54A;
+  color: white;
+  border: none;
+}
+
+.nav {
+  padding: 0;
+  margin: 0;
+  display: block;
+  list-style: none;
+  border-top: 2px solid #dfdfdf;
+  border-bottom: 2px solid #dfdfdf;
+}
+.nav .nav-ul {
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-auto-flow: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.nav .nav-ul .link {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 500;
+}
+
+/*# sourceMappingURL=style.css.map */

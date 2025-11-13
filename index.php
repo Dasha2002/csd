@@ -29,15 +29,15 @@
             </div>
 
             <div class="header-consult">
-                <div class="block-num-consult">
-                    <p class="num">+7 861 20-29-530</p>
-                    <p class="consult">Получите консультацию</p>
+                <div class="block-consult">
+                    <div class="num-consult">
+                        <p class="num">+7 861 20-29-530</p>
+                        <p class="consult">Получите консультацию</p>
+                    </div>
+                    <button class="btn-header-consult">Бесплатная консультация</button>
                 </div>
-                <button class="btn-header-consult">Бесплатная консультация</button>
             </div>
         </div>
-
-        fsdfds
         <nav class="nav">
             <ul class="nav-ul">
                 <li class="nav-li"><a class="link" href="#">Банкротство физ. лиц</a></li>
@@ -51,9 +51,47 @@
                 <li class="nav-li"><a class="link" href="#">Популярные вопросы</a></li>
             </ul>
         </nav>
-
-
+        
     </header>
+
+    <section class="banner-debt">
+        <div class="block-banner-debt">
+            <div class="text-debt">
+                <p class="p-one">Законно списываем долги</p>
+                <p class="bold">Избавим от долгов по<br> закону за <span>6-12</span> месяцев.</p>
+                <p class="p-two">Работаем строго по договору, с гарантией 100%<br> результата</з>
+                <div class="btn">
+                    <button class="btn-get-consult">Получить консультацию</button>
+                </div>
+                <p class="p-three">На бесплатной консультации с юристом вы сможете<br> узнать, как законно списать долги на основании 127-ФЗ</p>
+            </div>
+            <div class="img">
+                <img src="/assets/img/main-bunner.svg" class="img-main-banner">
+            </div>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="block">
+            <h1>Наши услуги</h1>
+            <div class="block-services">
+                <div class="block-1-first-row"></div>
+                <div class="block-2-first-row"></div>
+
+                <div class="block-3-second-row"></div>
+                <div class="block-4-second-row"></div>
+                <div class="block-5-second-row"></div>
+
+                <div class="block-6-third-row"></div>
+                <div class="block-7-third-row"></div>
+                <div class="block-8-third-row"></div>
+
+                <div class="block-9-fourth-row"></div>
+                <div class="block-10-fourth-row"></div>
+                <div class="block-11-fourth-row"></div>
+            </div>
+        </div>
+    </section>
 </body>
 
 </html>

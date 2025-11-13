@@ -52,28 +52,37 @@ html, body {
   justify-content: center;
   background-color: #F2F2F2;
 }
-.header-consult .block-num-consult {
+.header-consult .block-consult {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-auto-flow: row;
+  grid-template-columns: auto auto;
+  grid-auto-flow: column;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
 }
-.header-consult .num {
+.header-consult .block-consult .num-consult {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.header-consult .block-consult .num-consult .num {
   margin: 0;
   font-size: 24px;
   font-weight: 700;
 }
-.header-consult .consult {
+.header-consult .block-consult .num-consult .consult {
   margin: 0;
   font-size: 16px;
 }
-.header-consult .btn-header-consult {
-  margin-left: 5%;
-  width: 273px;
-  height: 51px;
+.header-consult .block-consult .btn-header-consult {
+  padding: 15px 20px;
+  text-align: center;
+  font-size: 21px;
   border-radius: 10px;
   background-color: #39B54A;
   color: white;
   border: none;
+  white-space: nowrap;
 }
 
 .nav {
@@ -97,6 +106,80 @@ html, body {
   text-decoration: none;
   color: inherit;
   font-weight: 500;
+}
+
+.banner-debt {
+  margin: 0;
+  padding: 20px 80px 45px 80px;
+}
+.banner-debt .block-banner-debt {
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 38px;
+  align-items: center;
+}
+.banner-debt .block-banner-debt .text-debt {
+  margin: 0;
+}
+.banner-debt .block-banner-debt .text-debt .p-one {
+  padding: 0;
+  margin: 0;
+  font-size: 24px;
+  white-space: nowrap;
+}
+.banner-debt .block-banner-debt .text-debt .bold {
+  margin: 0;
+  padding-top: 22px;
+  padding-bottom: 20px;
+  font-size: 56px;
+  white-space: nowrap;
+  font-weight: 600;
+}
+.banner-debt .block-banner-debt .text-debt .bold span {
+  font-weight: 700;
+}
+.banner-debt .block-banner-debt .text-debt .p-two {
+  margin: 0;
+  font-size: 24px;
+}
+.banner-debt .block-banner-debt .text-debt .btn {
+  margin: 0;
+  padding-top: 30px;
+}
+.banner-debt .block-banner-debt .text-debt .btn .btn-get-consult {
+  display: block;
+  margin: 0;
+  padding: 25px;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 10px;
+  background-color: #0071BC;
+  color: white;
+  border: none;
+  white-space: nowrap;
+  width: fit-content;
+}
+.banner-debt .block-banner-debt .text-debt .p-three {
+  font-size: 16px;
+}
+.banner-debt .block-banner-debt .img {
+  display: block;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+.banner-debt .block-banner-debt .img .img-main {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.services .block h1 {
+  font-size: 36px;
+  text-align: center;
+  font-weight: 600;
 }
 
 /*# sourceMappingURL=style.css.map */

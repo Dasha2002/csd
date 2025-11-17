@@ -226,7 +226,7 @@ html, body {
 
         .block-1-first-row {
             position: relative;
-            border-radius: 20px;
+            border-radius: 15px;
             overflow: hidden;
             height: 325px;
 
@@ -281,7 +281,7 @@ html, body {
                     width: 187px;
                     height: 51px;
                     padding: 15px 20px;
-                    border-radius: 8px;
+                    border-radius: 10px;
                     font-size: 18px;
                     border: none;
                     cursor: pointer;
@@ -293,7 +293,7 @@ html, body {
                     padding: 15px 20px;
                     width: 142px;
                     height: 51px;
-                    border-radius: 8px;
+                    border-radius: 10px;
                     font-size: 18px;
                     border: none;
                     cursor: pointer;
@@ -304,7 +304,7 @@ html, body {
 
   .block-2-first-row {
     position: relative;
-    border-radius: 20px;
+    border-radius: 15px;
     overflow: hidden;
     height: 325px;
     cursor: pointer;
@@ -351,11 +351,11 @@ html, body {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 169px 200px 169px;
   gap: 20px;
-  border-radius: 10px;
+  border-radius: 15px;
   padding-top: 20px;
 
   > div {
-    border-radius: 10px;
+    border-radius: 15px;
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -410,19 +410,19 @@ html, body {
     padding: 40px;
 
     img {
-      position: absolute;
-      top: 58%;          
-      right: 0;          
-      transform: translateY(-50%);
+      position: absolute;           
+      right: 0;
+      top: 50%;      
+      transform: translateY(-50%);       
       z-index: 0;
       height: 356px;        
-      width: 210px;      
-      height: auto;    
+      width: 210px;          
     }
 
     h1, .block-csd {
       position: relative; 
       z-index: 1;
+      
     }
 
     h1 {
@@ -430,6 +430,7 @@ html, body {
       font-weight: 600;
       text-align: left;
       margin: 0;
+      padding-top: 20px;
     }
 
     .block-csd {
@@ -456,6 +457,232 @@ html, body {
 
 
 
+// Блок процедура списания
+
+.write-downs {
+    padding: 60px 40px;
+    height: 655px;
+
+    .block {
+        position: relative;
+        display: flex;           
+        align-items: flex-start;     
+        gap: 40px;            
+
+        .text {
+            display: grid;
+            justify-content: end; 
+            align-items: flex-start;
+            margin-top: 0;
+            padding-top: 0;
+            padding-left: 40px;
+             
+
+            h1 {
+                margin: 0;
+                padding-top: 73px;
+                font-size: 56px;
+                font-weight: 500;
+            }
+
+            p {
+                margin: 0;
+                padding-top: 20px;
+                padding-bottom: 40px;
+                font-size: 20px;
+                font-weight: 500;
+            }
+
+            .block {
+                padding: 0;
+                margin: 0;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+
+                .block-one,
+                .block-two,
+                .block-three {
+                    height: 103px;
+                    width: auto;
+                    border-radius: 15px;
+                    background: linear-gradient(to left, #EFF6FD, #DDE3E8);
+                    
+                    .text-block {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: flex-start;      
+                        padding: 20px;  
+                        gap: 15px;             
+                    }
+
+                    img {
+                        width: 24px;
+                        height: 24px;
+                        flex-shrink: 0;
+                    }
+
+                    p {
+                        margin: 0;
+                        padding: 0;
+                        font-size: 18px;
+                        font-weight: 500;
+                    }
+                }
+
+                .block-three {
+                    height: 82px;
+                }
+            }
+
+        }
+    }
+}
+
+
+
+
+//  База знаний
+
+.knowledge-base {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: auto;
+    background-color: #F2F2F2;
+    
+    .container {
+        padding: 60px 40px;
+
+        .search-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            gap: 20px;
+
+            .knowledge-title { 
+            font-size: 36px;
+            white-space: nowrap; 
+            margin: 0;
+            flex-shrink: 0; 
+        }
+
+        .search-container {
+            display: flex;
+            align-items: stretch;
+            width: 100%;
+            height: 51px;
+            background: white;
+            border-radius: 12px;
+            border: 1px solid #39B54A;
+            position: relative; 
+            overflow: hidden;
+        }
+
+        .search-input {
+            flex: 1;
+            border-radius: 10px;
+            outline: none;
+            padding: 0 60px 0 20px;
+            font-size: 16px;
+            height: 100%;
+            color: #282828;
+            background-color: #f9f9f9;
+            border: none;
+        }
+
+        .search-input::placeholder {
+            color: #282828;
+            font-size: 16px;
+        }
+
+        .search-btn {
+            position: absolute;
+            right: 0; 
+            top: 0;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0 20px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .search-btn img {
+            width: 20px;
+            height: 20px;
+        }
+        }
 
         
+        .articles-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+            padding-top: 30px;
+
+            .article-card {
+               height: 271px;
+               width: auto;
+               background-color: white;
+               border-radius: 15px;
+               padding: 20px;
+
+               h3 {
+                padding: 0;
+                padding-top: 20px;
+                margin: 0;
+                font-size: 22px;
+                font-weight: 600;
+                
+               }
+
+               .article-subtitle {
+                padding: 0;
+                margin: 0;
+                font-size: 22px;
+                font-weight: 600;
+               }
+
+               .read-more-btn{
+                    background: none;
+                    border: none;
+                    padding: 0;
+                    padding-top: 25px;
+                    padding-bottom: 32px;
+                    margin: 0;
+                    font: inherit;
+                    font-size: 16px;
+                    cursor: pointer;
+                    outline: inherit;
+                    color: #39B54A; 
+                    text-decoration: underline;
+                    display: inline;
+               }
+            }
+        }
+       
+        .view-all-link {
+            margin-top: 30px;
+            text-decoration: none;
+            color: inherit;
+            display: block; 
+            width: 97%;
+            text-align: center;
+            background: white;
+            color: #39B54A;
+            padding: 12px 24px;
+            border: 1px solid #39B54A;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+    }
+
+}
 

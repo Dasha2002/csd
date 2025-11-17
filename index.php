@@ -102,9 +102,9 @@
                         </div>
                         <div class="block">
                             <img src="/assets/img/detail-blue-one.svg" class="img-blue-detail">
-                        <h2>Банкротство<br> индивидуальных<br> предпринимателей</h2>
+                            <h2>Банкротство<br> индивидуальных<br> предпринимателей</h2>
                         </div>
-                        
+
                     </a>
                 </div>
             </div>
@@ -219,10 +219,100 @@
     <section class="write-downs">
         <div class="block">
             <div class="img">
-                <img src="">
+                <img src="/assets/img/Mask group.png">
+            </div>
+            <div class="text">
+
+                <h1>Процедура списания<br> долгов - это путь<br> в новую жизнь</h1>
+
+                <p>Долг аннулируется полностью: У вас появится возможность<br> жить спокойно</p>
+
+                <div class="block">
+                    <div class="block-one">
+                        <div class="text-block">
+                            <img src="/assets/img/star.svg">
+                            <p>Вы сможете тратить<br> деньги на себя и свою<br> семью</p>
+                        </div>
+
+                    </div>
+                    <div class="block-two">
+                        <div class="text-block">
+                            <img src="/assets/img/star.svg">
+                            <p>Если у вас единственное<br> жилье (даже ипотека), оно<br> сохраняется</p>
+                        </div>
+
+                    </div>
+                    <div class="block-three">
+                        <div class="text-block">
+                            <img src="/assets/img/star.svg">
+                            <p>Можно будет свободно<br> выезжать за границу</p>
+                        </div>
+
+                    </div>
+                </div>
             </div>
         </div>
     </section>
+
+    <secction class="base">
+        <div class="knowledge-base">
+            <div class="container">
+
+                <div class="search-section">
+                    <h1 class="knowledge-title">Наша база знаний</h1> <!-- ← Заголовок ВНЕ контейнера поиска -->
+                    <div class="search-container">
+                        <input type="text" class="search-input" placeholder="Как избавится от долгов?">
+                        <button class="search-btn">
+                            <img src="/assets/img/magnifier.svg">
+                        </button>
+                    </div>
+                </div>
+
+                <div class="articles-grid">
+
+                    <article class="article-card">
+                        <div class="article-content">
+                            <h3 class="article-title">Как найти судебный приказ?</h3>
+                            <p class="article-subtitle">Сложна ли система поиска<br> документа</p>
+                            <p class="article-excerpt">
+                                Приказ — это судебный акт о взыскании<br> задолженности. Он выдается мировым<br> судьей по требованию кредитора<br> (взыскателя). Происходит это действо в
+                            </p>
+                        </div>
+                        <button class="read-more-btn">Читать полностью</button>
+                    </article>
+
+                    <article class="article-card">
+                        <div class="article-content">
+                            <h3 class="article-title">Как найти судебный приказ?</h3>
+                            <p class="article-subtitle">Сложна ли система поиска<br> документа</p>
+                            <p class="article-excerpt">
+                                 Приказ — это судебный акт о взыскании<br> задолженности. Он выдается мировым<br> судьей по требованию кредитора<br> (взыскателя). Происходит это действо в
+                            </p>
+                        </div>
+                        <button class="read-more-btn">Читать полностью</button>
+                    </article>
+
+                    <article class="article-card">
+                        <div class="article-content">
+                            <h3 class="article-title">Как найти судебный приказ?</h3>
+                            <p class="article-subtitle">Сложна ли система поиска<br> документа</p>
+                            <p class="article-excerpt">
+                                 Приказ — это судебный акт о взыскании<br> задолженности. Он выдается мировым<br> судьей по требованию кредитора<br> (взыскателя). Происходит это действо в
+                            </p>
+                        </div>
+                        <button class="read-more-btn">Читать полностью</button>
+                    </article>
+
+                </div>
+
+
+                <div class="view-all-section">
+                    <a href="#" class="view-all-link">Посмотреть все статьи</a>
+                </div>
+            </div>
+        </div>
+    </secction>
+
 </body>
 
 </html>

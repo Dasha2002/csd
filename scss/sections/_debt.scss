@@ -1,0 +1,75 @@
+
+.debt {
+    height: 478px;
+
+    .debt-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        .debt-block {
+            background: linear-gradient(to left, #FFFFFF, #F2F2F2);
+
+            .block-title {
+                padding: 0;
+                margin: 0;
+                font-size: 42px;
+                font-weight: 500;
+                color: #282828;
+            }
+
+            .block-debt {
+                margin: 0;
+                padding-top: 20px;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                align-items: start; 
+                gap: 20px;
+
+                .item-block {
+                    margin: 0;
+                    padding: 20px;
+                    border-radius: 15px;
+                    background: linear-gradient(to left, #EFF6FD, #DDE3E8);
+
+                    h1 {
+                        font-size:  32px;
+                        font-weight: 600;
+                        margin: 0;
+                        padding-bottom: 15px;
+                    }
+
+                    .icon-row {
+                        margin: 0;
+                        position: relative;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+
+                        .img {
+                            padding: 0 15px 0 0;
+                            
+                        }
+
+                        p {
+                            margin: 0;
+                            padding: 0;
+                            font-size: 18px;
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+            
+        }
+
+        .left-block {
+            padding: 60px 20px 60px 41px;
+        }
+
+        .right-block {
+            padding: 60px 42px 74px 19px;
+        }
+        
+    }
+}
+

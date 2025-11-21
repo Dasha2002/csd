@@ -1,0 +1,107 @@
+
+.questions {
+    .container {
+        padding: 40px;
+        margin: 0;
+        background-color: #fff;
+
+        .heading {
+            font-size: 36px;
+            font-weight: 600;
+            margin-bottom: 30px;
+            color: #282828;
+            text-align: center;
+        }
+
+        .item {
+            padding: 0;
+            margin: 0 0 10px 0;
+            height: 74px;
+            width: 100%;
+            border-radius: 15px;
+            background-color: #F2F2F2;
+            gap: 10px;
+
+            .question {
+                padding: 20px;
+                margin: 0;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                cursor: pointer;
+                font-weight: 500;
+                color: #333;
+
+                p {
+                    padding: 0;
+                    margin: 0;
+                    font-size: 22px;
+                }
+
+                .arrow {
+                    width: 34px;
+                    height: 34px;
+                    transition: transform 0.3s ease;
+                    flex-shrink: 0;
+                }
+
+
+            }
+
+            
+
+            &.expanded {
+            padding: 0;
+            margin: 0 0 10px 0;
+            height: 115px;
+            width: 100%;
+            border-radius: 15px;
+            background-color: #ffffff;
+            gap: 10px;
+            box-shadow: 0 10px 20px #00000026;
+
+            .question {
+                padding: 20px 20px 10px 20px;
+            }
+            .answer {
+                display: block;
+
+                &.visible {
+                    padding: 0 20px 30px 20px;
+                    margin: 0;
+                    color: #282828;
+                    font-size: 18px;
+                    font-weight: 500;
+                
+                    p {
+                        margin: 0;
+                    }
+                }
+                
+                    
+                
+            }
+        }
+        }
+
+        
+
+        .all-questions-btn {
+            display: block;
+            height: 51px;
+            width: 100%;
+            padding: 15px;
+            background-color: white;
+            color: #39B54A;
+            border: 1px solid #39B54A;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            margin-top: 30px;
+            transition: all 0.3s ease;
+            
+        }
+    }
+}
+

@@ -1,0 +1,79 @@
+.cases-2 {
+    padding: 0 40px 60px 40px;
+
+    .block-2 {
+        display: flex;
+        flex-direction: column;
+
+        .doc-block {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+
+            .block {
+                height: auto;
+                border-radius: 15px;
+                border: 1px solid #0000001A;
+
+                .doc-img {
+                    position: relative;
+                    height: 350px;
+                    background-image: url("/assets/img/Rectangle 33.png");
+                    background-size: cover;
+
+                    img {
+                        position: absolute;
+                        padding: 291px 96px 20px 19px;
+                    }
+                }
+
+                .text-block {
+                    padding: 20px 20px 30px 20px;
+
+                    .text-doc {
+                        margin: 0;
+                        padding-bottom: 10px;
+
+                        h2 {
+                            font-size: 16px;
+                            margin: 0;
+                            padding-bottom: 5px;
+                            font-weight: 500;
+                            color: #282828;
+                        }
+                        h3 {
+                            margin: 0;
+                            font-size: 18px;
+                            font-weight: 700;
+                            color: #282828;
+                        }
+                    }
+
+                    .text-num {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+
+                        .text {
+                            margin: 0;
+                            padding: 0;
+                            color: #282828;
+                            font-size: 14px;
+                            font-weight: 500;
+                            opacity: 50%;
+  
+                        }
+
+                        .sum {
+                            font-size: 18px;
+                            font-weight: 700;
+                            margin: 0;
+                            padding: 0;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,48 @@
+
+.reviws-2 {
+    padding: 60px 40px 60px 40px;
+    margin: 0;
+
+    .main-block {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px 20px;
+        grid-template-rows: repeat(2, 1fr);
+
+        .block-video {
+
+            .img {
+                position: relative;
+                height: 217px;
+                width: 100%;
+                border-radius: 15px;
+                background-image: url("/assets/img/image-video.png");
+                background-size: cover;
+                background-position: center;
+
+                img {
+                    position: absolute;
+                    display: block;
+                    padding: 77px 130px 76px 131px;
+                }
+            }
+
+            .text-block {
+                h1 {
+                    font-size: 18px;
+                    font-weight: 600;
+                }
+                p {
+                    font-size: 16px;
+                    font-weight: 500;
+                }
+
+                a {
+                    font-size: 16px;
+                    font-weight: 600;
+                    color:#39B54A;
+                }
+            }
+        }
+    }
+}

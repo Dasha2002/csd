@@ -9,6 +9,7 @@
                         <img src="/assets/img/btn.svg" alt="arrow">
                     </div>
                 </div>
+                <div class="answer"><p>Ответ</p></div>
             </div>
 
             <div class="item expanded">
@@ -18,7 +19,7 @@
                         <img src="/assets/img/btn-2.svg" alt="arrow">
                     </div>
                 </div>
-                <div class="answer visible">
+                <div class="answer">
                     <p>Не заключать договоры с псевдо-юридическими компаниями, обещающими подать в суд на банк и списать все долги за месяц.</p>
                 </div>
             </div>
@@ -30,6 +31,7 @@
                         <img src="/assets/img/btn.svg" alt="arrow">
                     </div>
                 </div>
+                <div class="answer"><p>Ответ</p></div>
             </div>
 
             <div class="item">
@@ -39,6 +41,7 @@
                         <img src="/assets/img/btn.svg" alt="arrow">
                     </div>
                 </div>
+                <div class="answer"><p>Ответ</p></div>
             </div>
 
             <div class="item">
@@ -48,6 +51,7 @@
                         <img src="/assets/img/btn.svg" alt="arrow">
                     </div>
                 </div>
+                <div class="answer"><p>Ответ</p></div>
             </div>
 
             <div class="item">
@@ -57,6 +61,7 @@
                         <img src="/assets/img/btn.svg" alt="arrow">
                     </div>
                 </div>
+                <div class="answer"><p>Ответ</p></div>
             </div>
 
             <button class="all-questions-btn">Все вопросы и ответы</button>

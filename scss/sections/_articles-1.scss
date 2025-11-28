@@ -1,0 +1,56 @@
+.article-1 {
+    padding: 20px 40px 40px 40px;
+
+    .block-article {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+        align-items: start;
+
+        .block-1 {
+            h1 {
+                font-size: 56px;
+                font-weight: 500;
+                color: #282828;
+                margin: 0;
+                padding-bottom: 20px;
+            }
+
+            p {
+                margin: 0;
+                font-size: 18px;
+                font-weight: 500;
+                color: #282828;
+            }
+        }
+
+        .block-2 {
+            border-radius: 15px;
+            background-color: #FBFBFB;
+            padding: 20px 20px 30px 20px;
+            h2 {
+                font-size: 22px;
+                font-weight: 600;
+                margin: 0;
+                padding-bottom: 15px;
+                color: #282828;
+            }
+
+            p {
+                font-size: 18px;
+                font-weight: 500;
+                color: #282828;
+                margin: 0;
+                padding-bottom: 25px;
+            }
+
+            .btn {
+                a {
+                    margin: 0;
+                    font-size: 16px;
+                    color: #39B54A;
+                }
+            }
+        }
+    }
+}

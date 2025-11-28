@@ -1,0 +1,63 @@
+.service-bunk-6 {
+    padding: 0 40px;
+
+    .block-bunk-6 {
+        h1 {
+            text-align: center;
+            font-size: 48px;
+            margin: 0;
+            padding-bottom: 30px;
+        }
+        
+        .block-6 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            align-items: stretch;
+
+            .block-second-row a div {
+    height: 60%;  // растянуть внутренний div на всю высоту ячейки
+}
+
+            .block-second-row {
+                
+                a {
+                    text-decoration: none;
+                    margin: 0;
+                    div {
+                        padding: 40px;
+                        margin: 0;
+                        background-color: #0071BC;
+                        border-radius: 15px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: flex-start;
+
+                        h2 {
+                            color: white;
+                            font-size: 26px;
+                            font-weight: 700;
+                            margin: 0;
+                            text-decoration: none;
+                            padding-top: 10px;
+                        }
+                    }
+                }
+                
+
+            }
+
+            .two {
+                a {
+                    div {
+                        padding: 40px;
+                        background-color: #39B54A;
+                        border-radius: 15px;
+                    }
+                }
+            }
+        }
+        
+    }
+}

@@ -43,6 +43,7 @@
             font-size: 16px;
             height: 100%;
             color: #282828;
+            opacity: 30%;
             background-color: #f9f9f9;
             border: none;
         }
@@ -136,6 +137,20 @@
             font-size: 16px;
             font-weight: 500;
         }
+
+        .extra-articles {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all .4s ease;
+}
+
+.extra-articles.open {
+    max-height: 2000px;
+    opacity: 1;
+}
+
+
 
     }
 

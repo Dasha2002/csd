@@ -11,8 +11,12 @@
 <body>
 
     <?php include __DIR__ . '/includes/header.php'; ?>
-    
+    <?php include __DIR__ . '/includes/text-3.php'; ?>
+    <?php include __DIR__ . '/includes/articles-1.php'; ?>
+    <?php include __DIR__ . '/includes/articles-2.php'; ?>
 
+    <?php include __DIR__ . '/includes/consultation.php'; ?>
+    <?php include __DIR__ . '/includes/footer.php'; ?>
 
 
     <script src="/assets/js/main.js"></script>

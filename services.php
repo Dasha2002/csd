@@ -14,7 +14,12 @@
     <?php include __DIR__ . '/includes/text.php'; ?>
     <?php include __DIR__ . '/includes/service-page.php'; ?>
 
-    <?php include __DIR__ . '/includes/services-2.php'; ?>
+    <?php include __DIR__ . '/includes/block-service.php'; ?>
+    <?php include __DIR__ . '/includes/questions.php'; ?>
+    <?php include __DIR__ . '/includes/video.php'; ?>
+    <?php include __DIR__ . '/includes/consultation.php'; ?>
+    <?php include __DIR__ . '/includes/footer.php'; ?>
+   
 
     <script src="/assets/js/main.js"></script>
 

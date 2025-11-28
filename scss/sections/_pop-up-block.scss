@@ -1,0 +1,210 @@
+html.popup-open, body.popup-open {
+  overflow: hidden;
+  height: 100%;
+
+  &::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(6px);
+    z-index: 998;
+  }
+}
+
+#popup-block {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+
+  .block {
+    display: flex;
+    position: relative;
+    max-width: 900px;
+    width: 100%;
+    gap: 0;
+    align-items: flex-end;
+
+    .block-form {
+      background-color: #fff;
+      border-radius: 20px;
+      padding: 30px;
+      width: 60%; // левая часть блока для формы
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin: 0;
+
+        .form-fields {
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+
+          .name,
+          .phone {
+            input {
+              width: 367px;
+              height: 51px;
+              margin: 0;
+              border-radius: 10px;
+              padding: 0 20px;
+              border: none;
+              font-size: 16px;
+              outline: none;
+              background-color: #f0f0f0;
+
+              &::placeholder {
+                color: #282828;
+                opacity: 40%;
+                margin: 0;
+              }
+            }
+          }
+
+         .sum {
+             
+
+            .sum-inner {
+                width: 405px;
+                height: 51px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;           
+                background-color: #f0f0f0;
+                border-radius: 10px;
+                padding: 0 20px;
+                box-sizing: border-box;
+
+                .counter-btn {
+                    background-color: #39B54A; 
+                    border: none;
+                    width: 24px;
+                    height: 24px;
+                    border-radius: 50%;        
+                    cursor: pointer;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;       
+
+                    img {
+                        display: block;
+                        width: 24px;           
+                        height: 24px;
+                    }
+                }
+            
+                .counter-label {
+                    color: #282828;
+                    opacity: 40%;
+                    font-size: 16px;
+                    user-select: none;         
+                }
+            }
+        }
+    }
+
+        .form-footer {
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+
+          .checkbox-block {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            .checkbox-input {
+              display: none;
+            }
+
+            .checkbox-custom {
+              width: 28px;
+              height: 28px;
+              border: 1px solid #2828281A;
+              background-color: #2828280D;
+              border-radius: 4px;
+              position: relative;
+              cursor: pointer;
+            }
+
+            .checkbox-input:checked + .checkbox-custom::after {
+              content: '';
+              position: absolute;
+              left: 7px;
+              top: 3px;
+              width: 10px;
+              height: 16px;
+              border: 1px solid #2828280D;
+              border-width: 0 3px 3px 0;
+              transform: rotate(45deg);
+            }
+
+            .checkbox-text {
+              font-size: 14px;
+              color: #282828;
+            }
+          }
+
+          .btn {
+            button {
+                width: 367px;
+              height: 51px;
+              background-color: #0071bc;
+              color: #ffffff;
+              border: none;
+              border-radius: 10px;
+              font-size: 18px;
+              font-weight: 600;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+
+    .block-img {
+        position: absolute;
+        right: 45px;  
+        bottom: -1px; 
+        width: 45%;
+        z-index: 1001;
+
+        img {
+            width: 350px;
+            height: auto;
+            object-fit: cover;
+            display: block;
+        }
+
+  .btn-close {
+    position: absolute;
+    top: 0;  
+    right: 50px; 
+    z-index: 1002;
+
+    button {
+      background: none;
+      border: none;
+      cursor: pointer;
+
+      img {
+        width: 28px; 
+        height: 28px;
+      }
+    }
+  }
+}
+
+
+    
+  }
+}

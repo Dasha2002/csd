@@ -11,6 +11,8 @@
 
         .text {
             padding-bottom: 110px;
+            padding-left: 0;
+            padding-right: 0;
             height: 255px;
             width: auto;
 
@@ -43,6 +45,7 @@
                 font-weight: 700;
                 border-radius: 15px;
                 border: none;
+                cursor: pointer;
             }
         }
         }

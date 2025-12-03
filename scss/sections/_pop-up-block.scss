@@ -1,16 +1,18 @@
 html.popup-open, body.popup-open {
-  overflow: hidden;
-  height: 100%;
+  overflow: hidden; /* блокировка скролла остаётся */
+  /* height убран, чтобы не сбрасывать прокрутку */
 
   &::before {
     content: "";
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.45);
-    backdrop-filter: blur(6px);
+    background: #0000000e;
+    backdrop-filter: blur(5px);
     z-index: 998;
+    pointer-events: none; /* чтобы фон не блокировал клики на попап (опционально) */
   }
 }
+
 
 #popup-block {
   display: none;
@@ -19,7 +21,7 @@ html.popup-open, body.popup-open {
   z-index: 999;
   justify-content: center;
   align-items: center;
-  padding: 40px;
+  margin: 0;
 
   .block {
     display: flex;
@@ -33,7 +35,7 @@ html.popup-open, body.popup-open {
       background-color: #fff;
       border-radius: 20px;
       padding: 30px;
-      width: 60%; // левая часть блока для формы
+      width: 60%; 
       display: flex;
       flex-direction: column;
       gap: 20px;
@@ -130,7 +132,7 @@ html.popup-open, body.popup-open {
               width: 28px;
               height: 28px;
               border: 1px solid #2828281A;
-              background-color: #2828280D;
+              background-color: #39B54A;
               border-radius: 4px;
               position: relative;
               cursor: pointer;
@@ -146,17 +148,19 @@ html.popup-open, body.popup-open {
               border: 1px solid #2828280D;
               border-width: 0 3px 3px 0;
               transform: rotate(45deg);
+              border-color: white;
             }
 
             .checkbox-text {
               font-size: 14px;
               color: #282828;
+              text-decoration: underline;
             }
           }
 
           .btn {
             button {
-                width: 367px;
+              width: 75%;
               height: 51px;
               background-color: #0071bc;
               color: #ffffff;

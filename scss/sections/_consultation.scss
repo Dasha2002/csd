@@ -114,38 +114,48 @@
 
                         .checkbox-block {
                             display: flex;
-                            align-items: center; 
+                            align-items: center;
+                            gap: 10px;
 
-                           .checkbox-input {
-                                display: none;
+                            .checkbox-wrapper {
+                                display: flex;
+                                align-items: center;
+                                cursor: pointer;
+                                position: relative;
                             }
 
-                           .checkbox-custom {
+                            .checkbox-input {
+                                position: absolute;
+                                opacity: 0;
+                                pointer-events: none;
+                            }
+
+                            .checkbox-custom {
                                 width: 28px;
                                 height: 28px;
-                                border: 2px solid #ffffff; 
-                                background-color: #ffffff7c;
-                                
+                                border: 1px solid #ffffff;
+                                background-color: rgba(255, 255, 255, 0.5);
                                 border-radius: 4px;
-                                margin-right: 10px;       
-                                position: relative;       
-                                cursor: pointer;
+                                position: relative;
 
-                                
+                                &::after {
+                                    content: '';
+                                    position: absolute;
+                                    width: 10px;
+                                    height: 16px;
+                                    border: solid #ffffff;
+                                    border-width: 0 3px 3px 0;
+                                    left: 7px;
+                                    top: 3px;
+                                    transform: rotate(45deg);
+                                    opacity: 0;
+                                    transition: opacity .10s ease;
+                                }
                             }
 
                             .checkbox-input:checked + .checkbox-custom::after {
-                                content: '';
-                                position: absolute;
-                                left: 7px;           
-                                top: 3px;           
-                                width: 10px;         
-                                height: 16px;        
-                                border: solid #ffffff;     
-                                border-width: 0 3px 3px 0;  
-                                transform: rotate(45deg);
+                                opacity: 1;
                             }
-
                             .checkbox-text {
                                 color: #ffffff;
                                 font-size: 14px;
@@ -163,7 +173,7 @@
                                 font-size: 18px;
                                 font-weight: 600;
                                 border-radius: 10px;
-                                
+                                cursor: pointer;
                             }
                         }
                     }

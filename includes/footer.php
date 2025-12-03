@@ -1,7 +1,7 @@
  <footer class="footer">
         <div class="footer-container">
 
-            <!-- Левая колонка: информация об организации -->
+        <!-- Левая калонка: адрес -->
             <div class="footer-column-one">
                 <img src="/assets/img/logo-footer.svg">
                 <div class="block-map">
@@ -16,17 +16,17 @@
             <div class="footer-column-two">
                 <nav>
                     <div class="one">
-                        <a href="#" class="footer__menu-link">Отзывы</a>
+                        <a href="reviws.php" class="footer__menu-link">Отзывы</a>
                         <a href="#" class="footer__menu-link">Контакты</a>
-                        <a href="#" class="footer__menu-link">Статьи</a>
-                        <a href="#" class="footer__menu-link">Завершенные дела</a>
+                        <a href="articles.php" class="footer__menu-link">Статьи</a>
+                        <a href="compileted-cases.php" class="footer__menu-link">Завершенные дела</a>
                         <a href="#" class="footer__menu-link">Популярные вопросы</a>
                     </div>
                     <div class="two">
-                        <a href="#" class="footer__menu-link">Банкротство физ. лиц</a>
+                        <a href="bankruptcy.php" class="footer__menu-link">Банкротство физ. лиц</a>
                         <a href="#" class="footer__menu-link">Банкротство юр. лиц</a>
                         <a href="#" class="footer__menu-link">О нас</a>
-                        <a href="#" class="footer__menu-link">Услуги и стоимость</a>
+                        <a href="services.php" class="footer__menu-link">Услуги и стоимость</a>
                     </div>
                 </nav>
             </div>

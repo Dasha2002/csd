@@ -13,11 +13,11 @@
           </div>
           <div class="sum">
             <div class="sum-inner">
-              <button type="button" class="counter-btn">
+              <button type="button" class="counter-btn btnMinus">
                 <img src="/assets/img/form-btn-one.svg" alt="">
               </button>
               <span class="counter-label">Сумма всех долгов</span>
-              <button type="button" class="counter-btn">
+              <button type="button" class="counter-btn btnPlus">
                 <img src="/assets/img/form-btn-two.svg" alt="">
               </button>
             </div>
@@ -28,7 +28,7 @@
           <div class="checkbox-block">
             <input type="checkbox" class="checkbox-input" id="data-consent">
             <label for="data-consent" class="checkbox-custom"></label>
-            <span class="checkbox-text">Даю согласие на обработку персональных данных</span>
+            <span class="checkbox-text">Даю согласие на обработку персональных<br> данных</span>
           </div>
           <div class="btn">
             <button type="submit">Отправить</button>

@@ -56,7 +56,7 @@
         grid-template-columns: auto auto; // Две колонки: текст и кнопка
         grid-auto-flow: column;
         align-items: center;
-        gap: 20px; // Расстояние между текстом и кнопкой
+        gap: 20px; 
         justify-content: center;
 
         .num-consult {
@@ -85,7 +85,7 @@
             color: white;
             border: none;
             cursor: pointer;
-            white-space: nowrap; // Чтобы текст кнопки не переносился
+            white-space: nowrap; 
         }
     }
 

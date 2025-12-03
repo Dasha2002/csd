@@ -11,6 +11,7 @@
 <body>
 
     <?php include __DIR__ . '/includes/header.php'; ?>
+    <?php include __DIR__ . '/includes/pop-up-block.php'; ?>
     <?php include __DIR__ . '/includes/text-3.php'; ?>
     <?php include __DIR__ . '/includes/articles-1.php'; ?>
     <?php include __DIR__ . '/includes/articles-2.php'; ?>

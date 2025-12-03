@@ -1,4 +1,6 @@
 
+
+
 // questions переключатель для вопросов
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -59,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Если мы закрываем блок → прокручиваем вверх
         if (!isOpening) {
-            setTimeout(() => {
+            window.setTimeout(() => {
                 targetBlock.scrollIntoView({
                     behavior: "smooth",
                     block: "start"
@@ -74,59 +76,96 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.addEventListener("DOMContentLoaded", () => {
   const popup = document.getElementById("popup-block");
-  const openBtn = document.querySelector(".btn-header-consult");
+  const openButtons = document.querySelectorAll(".btn-header-consult, .btn-footer, .btn-get-consult, .btn-application, .btn-bunk, .btn-bunk-5, .btn-services, [data-open-popup]");
   const closeBtn = document.querySelector("#popup-block .btn-close button");
-  const overlaySelector = document.body; // будем управлять классами на body + html
-  let scrollY = 0;
+  let lastScrollY = 0;
 
   function openPopup() {
+    // сохраняем позицию — на случай, если нужно вернуть (мы не фиксируем body)
+    lastScrollY = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
+
     document.documentElement.classList.add("popup-open");
     document.body.classList.add("popup-open");
-    document.getElementById("popup-block").style.display = "flex";
-}
 
-function closePopup() {
+    popup.style.display = "flex";
+  }
+
+  function closePopup() {
     document.documentElement.classList.remove("popup-open");
     document.body.classList.remove("popup-open");
-    document.getElementById("popup-block").style.display = "none";
-}
 
+    popup.style.display = "none";
 
-  // Открытие
-  if (openBtn) {
-    openBtn.addEventListener("click", (e) => {
+    // возвращаемся туда, где были — обычно не нужно, но оставим на всякий случай
+    window.scrollTo(0, lastScrollY);
+  }
+
+  // Вешаем открытие на любую кнопку с указанными селекторами.
+  openButtons.forEach(btn => {
+    btn.addEventListener("click", (e) => {
       e.preventDefault();
       openPopup();
     });
-  }
+  });
 
-  // Закрытие — кнопка крестик
+  // Закрытие крестиком
   if (closeBtn) {
     closeBtn.addEventListener("click", (e) => {
       e.preventDefault();
       closePopup();
     });
   } else {
-    // отладочная подсказка для dev: если не найдена кнопка
     console.warn("Кнопка закрытия попапа не найдена по селектору '#popup-block .btn-close button'");
   }
 
-  // Закрытие по нажатию ESC
+  // ESC
   document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") {
-      if (popup.style.display === "flex") closePopup();
-    }
-  });
-
-  // Закрытие при клике по фоновой области (не по внутреннему .block)
-  popup.addEventListener("click", (e) => {
-    if (e.target === popup) {
+    if (e.key === "Escape" && popup.style.display === "flex") {
       closePopup();
     }
   });
 
+  // Клик по фону (если кликнули по самому контейнеру #popup-block)
+  popup.addEventListener("click", (e) => {
+    if (e.target === popup) closePopup();
+  });
 });
 
 
+
+// Счетчик (сумма всех долгов)
+document.addEventListener("DOMContentLoaded", () => {
+    const counters = document.querySelectorAll(".sum-inner");
+
+    counters.forEach(counter => {
+        const btnPlus = counter.querySelector(".btnPlus");
+        const btnMinus = counter.querySelector(".btnMinus");
+        const textSum = counter.querySelector(".counter-label");
+
+        let currentValue = 0;
+
+        function updateDisplay() {
+            textSum.textContent = currentValue;
+        }
+
+        btnPlus.addEventListener("click", () => {
+            currentValue += 5000;
+            updateDisplay();
+        });
+
+        btnMinus.addEventListener("click", () => {
+            if (currentValue >= 5000) {
+                currentValue -= 5000;
+                updateDisplay();
+            }
+        });
+    });
+});
+
+
+// video кнопка перехода на страницу отзывы
+document.getElementById("reviews-btn").addEventListener("click", () => {
+    window.location.href = "reviws.php";
+});
 
 

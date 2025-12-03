@@ -12,7 +12,7 @@
                 <li>Полностью сопроводим вас на всех этапах процедуры.</li>
             </ul>
             <div class="btn">
-                <button>Получить консультацию</button>
+                <button class="btn-bunk-5">Получить консультацию</button>
             </div>
         </div>
         <div class="img">

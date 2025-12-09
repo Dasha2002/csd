@@ -168,4 +168,99 @@ document.getElementById("reviews-btn").addEventListener("click", () => {
     window.location.href = "reviws.php";
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburgerMenu = document.getElementById('hamburger-menu');
+    const mobileNav = document.getElementById('mobile-nav');
 
+    hamburgerMenu.addEventListener('click', function() {
+        // Переключаем класс 'active' для бургер-меню и навигации
+        hamburgerMenu.classList.toggle('active');
+        mobileNav.classList.toggle('active');
+    });
+
+    // Закрывать меню при клике на ссылку
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            hamburgerMenu.classList.remove('active');
+            mobileNav.classList.remove('active');
+        });
+    });
+});
+
+
+
+// КАРУСЕЛЬ для услуг 
+const container = document.querySelector('.block-two-mobile');
+const track = container.querySelector('.carousel-track');
+const dots = container.querySelectorAll('.dot');
+const items = [...track.children];
+
+let currentIndex = 0;
+
+function getStep() {
+  const w = items[0].offsetWidth;
+  const gap = parseFloat(getComputedStyle(track).gap);
+  return w + gap;
+}
+
+function updateCarousel() {
+  track.style.transform = `translateX(-${currentIndex * getStep()}px)`;
+  dots.forEach((dot, i) => dot.classList.toggle('active', i === currentIndex));
+}
+
+// КЛИКИ по кружкам
+dots.forEach(dot => {
+  dot.addEventListener('click', () => {
+    currentIndex = +dot.dataset.index;
+    updateCarousel();
+  });
+});
+
+updateCarousel();
+
+
+
+// карусель для видео в мобильной версии
+const slider = document.querySelector('.main-block-mob .block');
+
+let isDown = false;
+let startX;
+let scrollLeft;
+
+slider.addEventListener('mousedown', (e) => {
+    isDown = true;
+    slider.classList.add('active');
+    startX = e.pageX - slider.offsetLeft;
+    scrollLeft = slider.scrollLeft;
+});
+
+slider.addEventListener('mouseleave', () => {
+    isDown = false;
+    slider.classList.remove('active');
+});
+
+slider.addEventListener('mouseup', () => {
+    isDown = false;
+    slider.classList.remove('active');
+});
+
+slider.addEventListener('mousemove', (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - slider.offsetLeft;
+    const walk = (x - startX) * 2;
+    slider.scrollLeft = scrollLeft - walk;
+});
+
+/* Touch события для телефонов */
+slider.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].clientX;
+    scrollLeft = slider.scrollLeft;
+});
+
+slider.addEventListener('touchmove', (e) => {
+    const x = e.touches[0].clientX;
+    const walk = (x - startX) * 2;
+    slider.scrollLeft = scrollLeft - walk;
+});

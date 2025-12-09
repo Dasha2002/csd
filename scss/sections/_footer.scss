@@ -138,4 +138,96 @@ footer {
         }
 
     }
+    .mob {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    footer {
+        height: auto;
+        width: 100%;
+        background: url("/assets/img/footer-group-mob.png");
+
+        .footer-container {
+            display: none;
+        }
+        .mob {
+           padding: 40px 20px;
+           display: grid;
+           grid-template-columns: 1fr;
+           gap: 30px;
+
+           .footer-column-one {
+            max-width: 100%;
+            .block-map {
+                p {
+                    font-size: 16px;
+                }
+            }
+            .text {
+                font-size: 16px;
+            }
+
+            .btn-footer {
+                width: 100%;
+                font-size: 18px;
+            }
+           }
+
+           .footer-column-three {
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            .footer__contacts {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+
+                .footer__contact-link {
+                    font-size: 32px;
+                    font-weight: 700;
+                }
+                .footer__contact-link-two {
+                    font-size: 24px;
+                    font-weight: 700;
+                }
+                .footer__contact-link-three {
+                    font-size: 24px;
+                    font-weight: 700;
+                }
+            }
+
+            .footer__socials {
+                .text-socials {
+                    font-size: 14px;
+                    font-style: 500;
+                }
+            }
+           }
+
+           .footer-column-two {
+            nav {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 30px;
+
+                .footer__menu-link {
+                    font-size: 16px;
+                    font-weight: 500;
+                    color: white;
+                    margin: 0;
+                }
+
+            }
+            
+           }
+
+        }
+    }
 }

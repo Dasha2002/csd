@@ -13,4 +13,6 @@
                 <img src="/assets/img/main-bunner.svg" class="img-main-banner">
             </div>
         </div>
+
+        <p class="p-three-mob">На бесплатной консультации с юристом вы сможете узнать, как законно списать долги на основании 127-ФЗ</p>
     </section>

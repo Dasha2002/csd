@@ -13,21 +13,21 @@
                     <div class="block-one">
                         <div class="text-block">
                             <img src="/assets/img/star.svg">
-                            <p>Вы сможете тратить<br> деньги на себя и свою<br> семью</p>
+                            <p>Вы сможете тратить деньги на себя и свою семью</p>
                         </div>
 
                     </div>
                     <div class="block-two">
                         <div class="text-block">
                             <img src="/assets/img/star.svg">
-                            <p>Если у вас единственное<br> жилье (даже ипотека), оно<br> сохраняется</p>
+                            <p>Если у вас единственное жилье (даже ипотека), оно сохраняется</p>
                         </div>
 
                     </div>
                     <div class="block-three">
                         <div class="text-block">
                             <img src="/assets/img/star.svg">
-                            <p>Можно будет свободно<br> выезжать за границу</p>
+                            <p>Можно будет свободно выезжать за границу</p>
                         </div>
 
                     </div>

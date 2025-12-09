@@ -109,3 +109,43 @@
     }
 }
 
+@media screen and (max-width: 600px) {
+    section.questions {
+        padding: 0 20px 40px 20px;
+    }
+    .questions {
+
+        .container {
+
+            .heading {
+                font-size: 28px;
+                font-weight: 600;
+                margin: 0;
+                padding-bottom: 20px;
+            }
+
+            .item {
+
+                .question {
+                    padding: 15px;
+
+                    p {
+                        font-size: 18px;
+                        font-weight: 600;
+                    }
+                }
+
+                .answer {
+                    p {
+                        font-size: 16px;
+                    }
+                }
+            }
+
+            .all-questions-btn {
+                margin-top: 20px;
+                font-size: 16px;
+            }
+        }
+    }
+}

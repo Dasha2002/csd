@@ -85,4 +85,123 @@
             }
         }
     }
+
+    .main-block-mob {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .video {
+        padding: 20px 20px 40px 20px;
+
+        /* скрываем ПК-версию */
+        .main-block {
+            display: none;
+        }
+
+        /* показываем мобильную */
+        .main-block-mob {
+            display: block;
+
+            .text {
+                padding: 0;
+
+                h1 {
+                    font-size: 28px;
+                    margin: 0 0 10px 0;
+                }
+
+                p {
+                    font-size: 16px;
+                    margin: 0 0 20px 0;
+                }
+            }
+
+            /* КАРУСЕЛЬ */
+            .block {
+                display: flex;
+                gap: 20px;
+                overflow-x: auto;
+                scroll-snap-type: x mandatory;
+                -webkit-overflow-scrolling: touch;
+                padding-bottom: 10px;
+
+                /* убираем полоску */
+                scrollbar-width: none;
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+
+                .block-video {
+                    
+                    scroll-snap-align: start;
+                    flex-shrink: 0;
+
+                    .img {
+                        position: relative;
+                        height: 217px;
+                        width: 325px;
+                        border-radius: 15px;
+                        background-image: url("/assets/img/image-video.png");
+                        background-size: cover;
+
+                        img {
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            width: 64px;  
+                            height: 64px;
+                            padding: 0 !important;
+                        }
+                    }
+
+                    .text-block {
+                        margin-top: 10px;
+
+                        h1 {
+                            font-size: 18px;
+                            font-weight: 600;
+                            margin: 0;
+                            padding-bottom: 10px;
+                        }
+
+                        p {
+                            font-size: 14px;
+                            font-weight: 500;
+                            margin: 0;
+                            padding-bottom: 15px;
+                        }
+
+                        a {
+                            font-size: 14px;
+                            font-weight: 600;
+                            color: #39B54A;
+                        }
+                    }
+                }
+            }
+
+            /* кнопка как в ПК */
+            .button {
+                margin: 0;
+                text-align: center;
+                padding-top: 30px;
+                width: 100%;
+
+                button {
+                    width: 100%;
+                    padding-bottom: 15px;
+                    padding-top: 15px;
+                    background-color: #39B54A;
+                    color: white;
+                    font-size: 18px;
+                    font-weight: 700;
+                    border-radius: 15px;
+                    border: none;
+                }
+            }
+        }
+    }
 }

@@ -139,11 +139,11 @@
         }
 
         .extra-articles {
-    max-height: 0;
-    opacity: 0;
-    overflow: hidden;
-    transition: all .4s ease;
-}
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: all .4s ease;
+        }
 
 .extra-articles.open {
     max-height: 2000px;
@@ -154,4 +154,54 @@
 
     }
 
+}
+
+
+
+@media screen and (max-width: 650px) {
+    .knowledge-base {
+        .container {
+            padding: 34px 20px 30px;
+
+            .search-section {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 20px;
+                .knowledge-title {
+                    font-size: 28px;
+                    font-weight: 600;
+                }
+            }
+
+            .articles-grid {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 20px;
+                .article-card {
+                    height: auto;
+                    .article-content {
+                        .article-title {
+                            font-size: 18px;
+                        }
+                        .article-subtitle {
+                            font-size: 18px;
+                        }
+                        .article-excerpt {
+                            font-size: 16px;
+                        }
+                    }
+                    .read-more-btn {
+                        padding: 0;
+                    }
+                }
+            }
+        }
+
+        .view-all-section {
+            .view-all-link {
+            width: 86%;
+        }
+        }
+        
+    }
 }

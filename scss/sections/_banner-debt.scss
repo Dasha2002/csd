@@ -1,61 +1,67 @@
-
 .banner-debt {
     margin: 0;
-    padding: 20px 80px 45px 80px;
+    padding: clamp(20px, 4vw, 60px) clamp(20px, 6vw, 80px) 45px;
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
 
     .block-banner-debt {
         margin: 0;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 38px;
-        align-items: center; 
+        gap: clamp(20px, 4vw, 60px);
+        align-items: center;
 
         .text-debt {
             margin: 0;
+
             .p-one {
                 padding: 0;
                 margin: 0;
-                font-size: 24px;
-                white-space: nowrap; 
+                font-size: clamp(18px, 2vw, 24px);
+                white-space: normal;
             }
+
             .bold {
                 margin: 0;
                 padding-top: 22px;
                 padding-bottom: 20px;
-                font-size: 56px;
-                white-space: nowrap; 
+                font-size: clamp(36px, 4vw, 56px);
+                white-space: normal;
                 font-weight: 600;
 
                 span {
                     font-weight: 700;
                 }
             }
+
             .p-two {
                 margin: 0;
-                font-size: 24px;
+                font-size: clamp(16px, 1.6vw, 24px);
             }
+
             .btn {
                 margin: 0;
                 padding-top: 30px;
 
-                .btn-get-consult{
-                display: block;
-                margin: 0;
-                padding: 25px;
-                text-align: center;
-                font-size: 18px;
-                border-radius: 10px;
-                background-color: #0071BC;
-                color: white;
-                border: none;
-                white-space: nowrap;
-                width: fit-content; 
-                cursor: pointer;
+                .btn-get-consult {
+                    display: block;
+                    margin: 0;
+                    padding: clamp(18px, 2vw, 25px);
+                    text-align: center;
+                    font-size: clamp(14px, 1.3vw, 18px);
+                    border-radius: 10px;
+                    background-color: #0071BC;
+                    color: white;
+                    border: none;
+                    white-space: nowrap;
+                    width: fit-content;
+                    cursor: pointer;
                 }
             }
-            
+
             .p-three {
-                font-size: 16px;
+                font-size: clamp(14px, 1.2vw, 16px);
             }
         }
 
@@ -66,13 +72,256 @@
             margin: 0;
             width: 100%;
             height: 100%;
-            
-            .img-main{
+
+            img,
+            .img-main-banner {
                 width: 100%;
                 height: 100%;
-                object-fit: cover; 
+                max-width: 600px;
+                object-fit: cover;
+            }
+        }
+    }
+
+    .p-three-mob {
+        display: none;
+    }
+}
+
+/* ————————————————————————— */
+/*      НОУТБУКИ ≤ 1200px     */
+/* ————————————————————————— */
+@media (max-width: 1200px) {
+    .banner-debt {
+        padding: 20px 40px;
+
+        .block-banner-debt {
+            .text-debt {
+                .p-one { font-size: 18px; }
+                .bold { font-size: 38px; }
+                .p-two { font-size: 16px; }
             }
         }
     }
 }
 
+/* ————————————————————————— */
+/*         ПЛАНШЕТЫ ≤ 1024px  */
+/* ————————————————————————— */
+@media screen and (max-width: 1024px) {
+    .banner-debt {
+        padding: 20px 20px 30px;
+
+        .block-banner-debt {
+            gap: 20px;
+
+            .text-debt {
+                .p-one { font-size: 15px; }
+                .bold { font-size: 32px; padding-top: 15px; padding-bottom: 15px; }
+                .p-two { font-size: 14px; }
+
+                .btn {
+                    padding-top: 15px;
+                    .btn-get-consult {
+                        padding: 16px 22px;
+                        font-size: 16px;
+                    }
+                }
+
+                .p-three { font-size: 12px; }
+            }
+
+            .img img {
+                width: 100%;
+                max-width: 450px;
+            }
+        }
+    }
+}
+
+/* ————————————————————————— */
+/*         МОБИЛЬНЫЕ ≤ 768px  */
+/* ————————————————————————— */
+@media screen and (max-width: 768px) {
+    .banner-debt {
+        padding: 15px 15px 0;
+        background: none;
+
+        .block-banner-debt {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 30px 15px;
+            gap: 20px;
+
+            background-image: url('/assets/img/fon-mob-head.svg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 20px;
+
+            .text-debt {
+                margin-top: -60px;
+                z-index: 2;
+
+                .p-one {
+                    font-size: 16px;
+                    color: white;
+                    font-weight: 500;
+                    text-align: left;
+                }
+
+                .bold {
+                    font-size: 26px;
+                    color: white;
+                    text-align: left;
+                    font-weight: 600;
+                    margin: 0;
+                    padding-top: 5px;
+                    padding-bottom: 0;
+                }
+
+                .p-two {
+                    font-size: 18px;
+                    color: white;
+                    text-align: left;
+                    margin: 0;
+                    padding-top: 10px;
+                }
+
+                .btn {
+                    padding: 0;
+                    margin-top: 20px;
+
+                    .btn-get-consult {
+                        width: 100%;
+                        padding: 20px;
+                        font-size: 18px;
+                    }
+                }
+
+                .p-three {
+                    display: none;
+                }
+            }
+
+            .img {
+                z-index: 1;
+                order: -1;
+                justify-content: center;
+                width: auto;
+                max-width: 80%;
+
+                .img-main-banner {
+                    content: url('/assets/img/mob-head.svg');
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+
+        .p-three-mob {
+            display: block;
+            font-size: 14px;
+            padding: 10px 20px 0;
+            font-weight: 500;
+            margin: 0;
+        }
+    }
+}
+
+/* ————————————————————————— */
+/*     МИКРОМобильные ≤ 480px */
+/* ————————————————————————— */
+@media screen and (max-width: 480px) {
+    .banner-debt .block-banner-debt {
+        padding: 25px 12px;
+
+        .text-debt {
+            margin-top: -40px;
+            .p-one { font-size: 14px; }
+            .bold { font-size: 22px; }
+            .p-two { font-size: 15px; }
+        }
+
+        .img {
+            max-width: 85%;
+        }
+    }
+}
+
+/* ————————————————————————— */
+/*     СУПЕР-МАЛЕНЬКИЕ ≤ 360px */
+/* ————————————————————————— */
+@media screen and (max-width: 360px) {
+    .banner-debt .block-banner-debt {
+        padding: 20px 10px;
+
+        .text-debt {
+            .bold { font-size: 20px; }
+            .p-two { font-size: 14px; }
+        }
+    }
+}
+
+
+/* ФИКС для ПК 1366–1600px (возврат к оригинальному виду) */
+@media (min-width: 1366px) and (max-width: 1600px) {
+    .banner-debt {
+        padding: 20px 80px 45px 80px !important;
+        max-width: none !important;
+    }
+
+    .banner-debt .block-banner-debt {
+        gap: 38px !important;
+        grid-template-columns: 1.15fr 0.85fr !important;
+    }
+
+    .banner-debt .text-debt {
+        padding-top: 44px;
+        .p-one {
+            font-size: 24px !important;
+
+        }
+
+        .bold {
+            font-size: 56px !important;
+            padding-top: 22px !important;
+            padding-bottom: 20px !important;
+        }
+
+        .p-two {
+            font-size: 24px !important;
+        }
+
+        .btn .btn-get-consult {
+            padding: 25px !important;
+            font-size: 18px !important;
+        }
+
+        .p-three {
+            font-size: 16px !important;
+        }
+    }
+
+    .banner-debt .img img {
+        max-width: none !important;
+        width: 100% !important;
+        height: auto !important;
+    }
+}
+/* Уменьшаем изображение для ПК 1366–1600px */
+@media (min-width: 1366px) and (max-width: 1600px) {
+    .banner-debt .img {
+        justify-content: flex-end !important;
+    }
+
+    .banner-debt .img img,
+    .banner-debt .img .img-main-banner {
+        width: 95% !important;      /* сузили */
+        max-width: 520px !important; /* ограничили максимальную ширину */
+        height: auto !important;     /* сохранили пропорции */
+        object-fit: contain !important;
+    }
+}

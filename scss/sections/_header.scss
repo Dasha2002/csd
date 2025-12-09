@@ -1,4 +1,10 @@
 
+/* Скрываем мобильные элементы на ПК */
+.mobile-header,
+.mobile-nav-container {
+    display: none;
+}
+
 .header{
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -38,9 +44,7 @@
             color: #282828;
         }
     }
-
 }
-
 
 .header-consult {
     width: 100%;
@@ -53,10 +57,10 @@
        
     .block-consult {
         display: grid;
-        grid-template-columns: auto auto; // Две колонки: текст и кнопка
+        grid-template-columns: auto auto;
         grid-auto-flow: column;
         align-items: center;
-        gap: 20px; 
+        gap: 20px;
         justify-content: center;
 
         .num-consult {
@@ -85,12 +89,10 @@
             color: white;
             border: none;
             cursor: pointer;
-            white-space: nowrap; 
+            white-space: nowrap;
         }
     }
-
 }
-
 
 .nav {
     padding: 0;
@@ -114,5 +116,143 @@
             color: inherit;
             font-weight: 500;
         }
+    }
+}
+
+/*Планшет*/
+@media screen and (max-width: 1024px) {
+    /* Шапка становится в две строки */
+    .header {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+    }
+
+    .header-logo-icon {
+        height: auto;
+        padding: 15px 0;
+    }
+    
+    .header-consult {
+        padding: 15px 0;
+    }
+
+    /* Навигация перестраивается в сетку 3x3 */
+    .nav .nav-ul {
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-flow: row;
+        grid-template-rows: repeat(3, auto);
+        justify-content: center;
+        text-align: center;
+        padding: 10px 0;
+        gap: 10px;
+    }
+    
+    .nav-li {
+        padding: 5px 10px;
+    }
+
+    .link {
+        font-size: 14px;
+    }
+}
+
+/* СТИЛИ ДЛЯ МОБИЛЬНЫХ УСТРОЙСТВ (ДО 768px) */
+
+@media screen and (max-width: 768px) {
+    /* Скрываем десктопные элементы */
+    .header, 
+    .nav {
+        display: none;
+    }
+
+    /* Показываем мобильные элементы */
+    .mobile-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 15px;
+        background-color: #fff;
+    }
+
+    .mobile-nav-container {
+        display: block;
+    }
+    
+    .mobile-logo img {
+        width: 180px;
+        height: 35px;
+        object-fit: contain;
+    }
+
+    .mobile-social-icons {
+        display: flex;
+        gap: 10.5px; /* <-- ИЗМЕНЕНИЕ ЗДЕСЬ */
+    }
+
+    .mobile-icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    /* --- Остальные стили для бургер-меню и выдвижного меню остаются без изменений --- */
+    .hamburger-menu {
+    display: flex; /* Оставляем flex для центрирования картинки */
+    align-items: center;
+    justify-content: center;
+    width: 40px; /* Можно сделать чуть больше для удобства */
+    height: 40px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+}
+
+.hamburger-icon {
+    width: 24px; /* Размер иконки */
+    height: 24px;
+    display: block; /* Убираем лишние отступы у картинки */
+    transition: transform 0.3s ease; /* Плавная анимация, если захотите */
+}
+
+    .mobile-nav-container {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 300px;
+        height: 100%;
+        background-color: #fff;
+        box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+        transition: right 0.3s ease-in-out;
+        z-index: 1000;
+        padding-top: 60px;
+    }
+
+    .mobile-nav-container.active {
+        right: 0;
+    }
+
+    .mobile-nav-ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .mobile-nav-li {
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    .mobile-link {
+        display: block;
+        padding: 15px 20px;
+        text-decoration: none;
+        color: #333;
+        font-weight: 500;
+        transition: background-color 0.2s;
+    }
+
+    .mobile-link:hover {
+        background-color: #f2f2f2;
     }
 }

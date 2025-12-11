@@ -1,3 +1,5 @@
+
+
 .services {
   padding: 40px;
 
@@ -7,7 +9,6 @@
       font-size: 48px;
       margin-bottom: 40px;
     }
-
     .bloc-one {
       display: grid;
       grid-template-columns: 2fr 1fr;
@@ -19,23 +20,27 @@
         border-radius: 15px;
         overflow: hidden;
         height: 325px;
-
         background-image: url('/assets/img/services-main-one.svg');
-        background-size: contain;
+        background-size: cover;
         background-repeat: no-repeat;
         background-position: left center;
 
-        .overlay-img img {
-          position: absolute;
-          inset: 0;
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          object-position: right center;
-          z-index: 2;
-          pointer-events: none;
+        .overlay-img {
+          img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: right center;
+            z-index: 2;
+            pointer-events: none;
+          }
         }
 
+        .gradient {
+          display: none;
+        }
         .text-overlay {
           position: absolute;
           top: 40px;
@@ -56,16 +61,33 @@
             line-height: 1.4;
             margin-bottom: 25px;
           }
+
+          .mob-p {
+            display: none;
+          }
+
         }
 
         .btn-overlay {
           position: absolute;
+          right: 0;
+          bottom: 0;
           display: flex;
-          padding: 212px 101px 62px 500px;
           gap: 10px;
           z-index: 3;
+
+          .btn-application,
+          .btn-detail {
+            padding: 12px 18px;
+            border-radius: 10px;
+            font-size: 16px;
+            border: none;
+          }
+
+          .btn-application { background: #0071BC; color: #fff; }
+          .btn-detail      { background: #fff; color: #18A14F; }
         }
-      }
+      } 
 
       .block-2-first-row {
         position: relative;
@@ -73,28 +95,38 @@
         overflow: hidden;
         height: 325px;
         cursor: pointer;
-
         background-image: url('/assets/img/main-services-two.svg');
-        background-size: cover;
+        background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
 
         .block {
           padding: 124px 40px 50px 40px;
+          
+          z-index: 3;
+
+
+          .img-blue-detail {
+            width: 48px;
+          }
 
           h2 {
-            position: absolute;
-            left: 40px;
-            bottom: 40px;
-            z-index: 3;
             color: #fff;
-            font-size: 22px;
-            line-height: 1.3;
-            max-width: 250px;
+            font-size: 26px !important;
+            margin: 0;
           }
         }
-      }
-    }
+
+        .overlay-img {
+          img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      } 
+    } 
 
     .bloc-one-mobile {
       display: none;
@@ -106,18 +138,35 @@
       grid-template-rows: 169px 200px 169px;
       gap: 20px;
       padding-top: 20px;
+
+      
+      > div {
+        border-radius: 12px;
+        padding: 18px;
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+
+        img { width: 40px; height: 40px; }
+        h2 {
+          font-size: 18px;
+          margin: 0;
+        }
+      }
     }
 
     .block-two-mobile {
       display: none;
     }
-  }
-}
+  } 
+} 
 
-/* МИНИ-ПЛАНШЕТЫ 500–700px */
-@media screen and (min-width: 500px) and (max-width: 700px) {
+
+
+/* Мини-планшеты: 500–900px */
+@media screen and (min-width: 500px) and (max-width: 900px) {
   .services {
-    padding: 30px;
+    padding: 40px !important;
 
     .block {
       h1 {
@@ -126,50 +175,58 @@
         text-align: center;
       }
 
-      /* ПК-версия — скрыть */
-      .bloc-one {
-        display: none !important;
+      
+      .bloc-one { 
+        display: none !important; 
       }
 
-      /* МОБИЛЬНЫЙ БЛОК — ПОКАЗАТЬ */
       .bloc-one-mobile {
         display: grid !important;
         grid-template-columns: 1fr;
-        gap: 25px;
+        gap: 20px !important;
 
         .block-1-first-row {
           position: relative;
           width: 100%;
-          height: 340px;
+          min-height: 260px; // или 300px если так было на дизайне
+          height: auto;
           border-radius: 15px;
           overflow: hidden;
           background-image: url('/assets/img/services-font.png');
           background-size: cover;
-          background-position: center;
-          padding-bottom: 40px;
-         
+          background-position: top;
+          
 
           .overlay-img {
-            
+            img { display: block;
+                width: 100%;
+                height: auto;
+                padding-bottom: 0; 
+              }
           }
 
           .text-overlay {
             position: absolute;
             left: 25px;
             right: 25px;
-            top: 25px;
-            color: #fff;
+            top: 58%;
             z-index: 3;
+            color: #fff;
 
-            h2 {
-              font-size: 22px;
-              font-weight: 700;
-              margin-bottom: 10px;
+            h2 { font-size: 27px; 
+              font-weight: 700; 
+              margin-bottom: 10px; 
             }
+            .tablet  { 
+              display: block !important;
+              font-size: 4vw !important;
+              margin: 0;
+              text-align: left;
 
+              
+            }
             p {
-              font-size: 15px;
-              line-height: 1.4;
+              display: none;
             }
           }
 
@@ -177,7 +234,7 @@
             position: absolute;
             left: 25px;
             right: 25px;
-            bottom: 25px;
+            bottom: 7vw;
             display: flex;
             gap: 10px;
 
@@ -186,35 +243,30 @@
               padding: 14px 18px;
               font-size: 16px;
               border-radius: 10px;
+              border: none;
             }
-
-            .btn-application {
-              background: #0071BC;
-              color: #fff;
-            }
-
-            .btn-detail {
-              background: #fff;
-              color: #18A14F;
-            }
+            .btn-application { background: #0071BC; color: #fff; }
+            .btn-detail      { background: #fff; color: #18A14F; }
           }
-        }
+        } 
 
-        /* Второй блок */
         .block-2-first-row {
+          position: relative;
           border-radius: 15px;
           overflow: hidden;
+          background-image: url('/assets/img/main-services-two.svg');
           background-size: cover;
-          background-position: center;
-          height: auto;
+          background-repeat: no-repeat;
+          background-position: top;
           min-height: 260px;
-          position: relative;
 
-          .overlay-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
+          .overlay-img {
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              display: block;
+            }
           }
 
           .block {
@@ -223,29 +275,26 @@
             bottom: 25px;
 
             h2 {
-              font-size: 20px;
+              font-size: 5vw;
               color: #fff;
               font-weight: 700;
               line-height: 1.3;
               max-width: 250px;
+              margin: 0;
             }
 
             .img-blue-detail {
-              width: 35px;
+              width: 55px;
               position: absolute;
-              bottom: 70px;
+              bottom: 110%;
               left: 0;
             }
           }
-        }
-      }
+        } 
+      } 
 
-      /* ПК блок со списком услуг — скрываем */
-      .block-two {
-        display: none !important;
-      }
+      .block-two { display: none !important; }
 
-      /* КАРУСЕЛЬ — ПОКАЗАТЬ */
       .block-two-mobile {
         display: block !important;
         margin-top: 20px;
@@ -254,22 +303,26 @@
           display: flex;
           gap: 15px;
           padding-bottom: 10px;
+          transition: transform 0.3s, box-shadow 0.3s;
+          height: 17vh;
 
+          .block-3-second-row, .block-4-second-row, .block-5-second-row {
+            padding: 20px;
+          }
           > div {
-            min-width: 260px;
-            padding: 18px;
+            min-width: 93%;
+            padding: 20px;
             border-radius: 15px;
+            
 
-            img {
-              width: 40px;
-              height: 40px;
-              margin-bottom: 10px;
-            }
-
-            h2 {
-              font-size: 18px;
+            a { text-decoration: none; color: inherit; display: block; }
+            img { width: 50px; height: 50px; margin-bottom: 10px; }
+            h2  { 
+              font-size: 5vw; 
               color: #fff;
               font-weight: 600;
+              margin: 0;
+              text-decoration: none;
             }
           }
 
@@ -284,83 +337,109 @@
           margin-top: 12px;
           gap: 8px;
 
-          .dot {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background: #ccc;
+          .dot { width: 20px; height: 20px; border-radius: 50%; background: #ccc; }
+          .dot.active { background: #39B54A; }
+        }
+      }
+    } 
+  } 
+} 
 
-            &.active {
-              background: #39B54A;
+
+/* Планшеты: 900–1024px */
+@media screen and (min-width: 900px) and (max-width: 1024px) {
+  .services {
+    padding: 20px !important;
+
+    .block {
+      h1 { text-align: center; }
+
+      .bloc-one {
+        display: grid;
+        grid-template-columns: 1.4fr 0.9fr;
+        gap: 20px;
+
+        .block-1-first-row {
+          background-size: cover !important;
+
+          .overlay-img {
+            display: none ;
+          }
+
+          .gradient {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, rgba(31, 175, 56, 0), #1FAF38 70%);
+            border-radius: 15px;
+            display: block;
+            z-index: 2;
+          }
+          .text-overlay {
+            top: 30px;
+            right: 0 !important;
+            padding-right: 20px;
+
+            h2 { 
+              font-size: 20px !important;
+              margin: 0;
+              text-align: right;
+             }
+            .mob-p  { 
+              display: block;
+              font-size: 15px !important;
+              margin: 0;
+              text-align: right;
+             }
+
+             p {
+              display: none;
+             }
+          }
+
+          .btn-overlay {
+          padding:  10px 20px 40px !important;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: flex-end;
+
+            .btn-application,
+            .btn-detail {
+              width: auto;
+              padding: 12px 18px;
+              font-size: 16px;
             }
           }
         }
-      }
-    }
-  }
-}
 
-
-      
-                
- 
-
-/*ВЕРСИЯ ДЛЯ ПЛАНШЕТОВ*/
-@media screen and (min-width: 700px) and (max-width: 1024px) {
-  .services {
-    padding: 30px;
-
-    .bloc-one {
-      grid-template-columns: 1.4fr 0.9fr;
-      gap: 20px;
-
-      .block-1-first-row {
-        height: 300px;
-
-        .text-overlay {
-          top: 30px;
-          right: 30px;
-
-          h2 { font-size: 22px; }
-          p { font-size: 16px; }
-        }
-
-        .btn-overlay {
-          left: 30px;
-          bottom: 30px;
-
-          .btn-application,
-          .btn-detail {
-            width: auto;
-            padding: 12px 18px;
-            font-size: 16px;
+        .block-2-first-row {
+          height: 300px;
+          background-position: left !important;
+          .block {
+            padding-top: 145px !important;
+            
+            h2 { 
+              font-size: 20px !important; 
+            }
           }
         }
+      } 
+
+      .block-two {
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: 170px;
+        gap: 15px;
+
+        > div { h2 { font-size: 22px; } }
       }
-
-      .block-2-first-row {
-        height: 300px;
-
-        .block h2 {
-          font-size: 20px;
-        }
-      }
-    }
-
-    .block-two {
-      grid-template-columns: repeat(3, 1fr);
-      grid-auto-rows: 170px;
-      gap: 15px;
-
-      h2 { font-size: 22px; }
-    }
-  }
-}
+    } 
+  } 
+} 
 
 
-/*МОБИЛЬНАЯ ВЕРСИЯ*/
+/* Мобильная версия: до 500px (включая отдельные корректировки для <390px) */
 @media screen and (max-width: 500px) {
-
   body .services,
   body .services .block,
   body .services .bloc-one-mobile,
@@ -370,6 +449,7 @@
     max-width: 100% !important;
     overflow: hidden !important;
   }
+
   body .services .bloc-one-mobile .overlay-img img {
     width: 100% !important;
     max-width: 100% !important;
@@ -381,15 +461,13 @@
     margin: 0;
 
     .block {
-
       h1 {
         font-size: 28px;
         margin: 0;
         padding-bottom: 20px;
       }
-      .bloc-one {
-        display: none;
-      }
+
+      .bloc-one { display: none; }
 
       .bloc-one-mobile {
         display: grid;
@@ -401,57 +479,41 @@
           position: relative;
           width: 100%;
           min-width: 0;
-          
           background-image: url('/assets/img/services-font.png');
           background-size: 100% auto;
           background-repeat: no-repeat;
           background-position: top center;
 
-       
           .overlay-img {
             z-index: 1;
             width: 100%;
             height: auto;
             margin: 0 auto;
 
-            img {
-              width: 100%;
-              height: auto;
-              display: block;
-              object-fit: contain;
-            }
+            img { width: 100%; height: auto; display: block; object-fit: contain; }
           }
 
-          
           .text-overlay {
             position: absolute;
-            left: 20px;          // отступы слева и справа можно оставить
+            left: 20px;
             right: 20px;
-            bottom: 90px;        // ← ← ← ВСЁ ВОЛШЕБСТВО ТУТ: всегда 20px от низа
+            bottom: 90px; 
             z-index: 3;
-
             color: white;
             text-align: left;
 
-            h2 {
-              font-size: 20px;
-              padding-bottom: 10px;
-              margin: 0;
-            }
-
-            p {
-              font-size: 16px;
-              margin: 0;
+            h2 { font-size: 20px; padding-bottom: 10px; margin: 0; }
+            p  { font-size: 16px; margin: 0; }
+            .tablet {
+              display: none;
             }
           }
 
-
-          
           .btn-overlay {
             position: absolute;
             left: 20px;
             right: 20px;
-            bottom: 20px;            
+            bottom: 20px;
             z-index: 3;
             display: flex;
             gap: 10px;
@@ -464,37 +526,32 @@
               border: none;
             }
 
-            .btn-application {
-              background: #0071BC;
-              color: white;
-            }
-            .btn-detail {
-              background: #fff;
-              color: #18A14F;
-            }
+            .btn-application { background: #0071BC; color: white; }
+            .btn-detail      { background: #fff; color: #18A14F; }
           }
-
-        }
+        } 
 
         .block-2-first-row {
           position: relative;
+          padding-left: 20px;
           border-radius: 15px;
           overflow: hidden;
           cursor: pointer;
-
           background-image: url('/assets/img/services-font-2.png');
           background-size: 100% auto;
           background-repeat: no-repeat;
           background-position: top center;
 
-          .overlay-img img {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: 2;
-            pointer-events: none;
+          .overlay-img {
+            img {
+              position: absolute;
+              inset: 0;
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              z-index: 2;
+              pointer-events: none;
+            }
           }
 
           .block {
@@ -502,6 +559,7 @@
             display: grid;
             grid-template-columns: 1fr;
             gap: 10px;
+            position: relative;
 
             .img-blue-detail {
               position: absolute;
@@ -520,16 +578,10 @@
               font-weight: 700;
             }
           }
+        } 
+      } 
 
-        }
-
-
-      }
-
-
-      .block-two {
-        display: none;
-      }
+      .block-two { display: none; }
 
       .block-two-mobile {
         position: relative;
@@ -543,7 +595,6 @@
           transition: transform 0.5s ease;
         }
 
-        
         .carousel-track > div {
           border-radius: 15px;
           display: flex;
@@ -552,19 +603,11 @@
           justify-content: flex-start;
           padding: 20px;
           transition: transform 0.3s, box-shadow 0.3s;
-          min-width: 320px; 
+          min-width: 320px;
 
-          a {
-            text-decoration: none;
-            color: inherit;
-            display: block;
-          }
+          a { text-decoration: none; color: inherit; display: block; }
 
-          img {
-            width: 40px;
-            height: 40px;
-            margin-bottom: 10px;
-          }
+          img { width: 40px; height: 40px; margin-bottom: 10px; }
 
           h2 {
             font-size: 20px;
@@ -586,250 +629,21 @@
           gap: 10px;
 
           .dot {
-          width: 12px;
-          height: 12px;
-          border-radius: 50%;
-          background-color: #ccc;
-          cursor: pointer;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #ccc;
+            cursor: pointer;
 
-          &.active {
-            background-color: #39B54A;
+            &.active { background-color: #39B54A; }
           }
         }
-      }
-    }
-
-    }
-  }
-
-
-}
-
-@media screen and (max-width: 390px){
-  body .services {
-    padding: 40px 15px;
-    margin: 0;
-
-    .block {
-
-      h1 {
-        font-size: 28px;
-        margin: 0;
-        padding-bottom: 20px;
-      }
-      .bloc-one {
-        display: none;
-      }
-
-      .bloc-one-mobile {
-        display: grid;
-        grid-template-columns: 1fr;
-        margin: 0;
-        gap: 10px;
-
-        .block-1-first-row {
-          position: relative;
-          width: 100%;
-          min-width: 0;
-          
-          background-image: url('/assets/img/services-font.png');
-          background-size: 100% auto;
-          background-repeat: no-repeat;
-          background-position: top center;
-
-       
-          .overlay-img {
-            z-index: 1;
-            width: 100%;
-            height: auto;
-            margin: 0 auto;
-
-            img {
-              width: 100%;
-              height: auto;
-              display: block;
-              object-fit: contain;
-            }
-          }
-
-          
-          .text-overlay {
-            position: absolute;
-            left: 20px;          // отступы слева и справа можно оставить
-            right: 20px;
-            bottom: 90px;        // ← ← ← ВСЁ ВОЛШЕБСТВО ТУТ: всегда 20px от низа
-            z-index: 3;
-
-            color: white;
-            text-align: left;
-
-            h2 {
-              font-size: 17px;
-              padding-bottom: 10px;
-              margin: 0;
-            }
-
-            p {
-              font-size: 12px;
-              margin: 0;
-            }
-          }
-
-
-          
-          .btn-overlay {
-            position: absolute;
-            left: 20px;
-            right: 20px;
-            bottom: 20px;            
-            z-index: 3;
-            display: flex;
-            gap: 10px;
-
-            .btn-application,
-            .btn-detail {
-              padding: 15px;
-              border-radius: 10px;
-              font-size: 16px;
-              border: none;
-            }
-
-            .btn-application {
-              background: #0071BC;
-              color: white;
-            }
-            .btn-detail {
-              background: #fff;
-              color: #18A14F;
-            }
-          }
-
-        }
-
-        .block-2-first-row {
-          position: relative;
-          border-radius: 15px;
-          overflow: hidden;
-          cursor: pointer;
-
-          background-image: url('/assets/img/services-font-2.png');
-          background-size: 100% auto;
-          background-repeat: no-repeat;
-          background-position: top center;
-
-          .overlay-img img {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: 2;
-            pointer-events: none;
-          }
-
-          .block {
-            padding: 124px 20px 50px 20px;
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 10px;
-
-            .img-blue-detail {
-              position: absolute;
-              z-index: 3;
-              bottom: 80px;
-            }
-
-            h2 {
-              position: absolute;
-              margin: 0;
-              z-index: 3;
-              color: #fff;
-              font-size: 20px;
-              line-height: 1.3;
-              bottom: 25px;
-              font-weight: 700;
-            }
-          }
-
-        }
-
-
-      }
-
-
-      .block-two {
-        display: none;
-      }
-
-      .block-two-mobile {
-        position: relative;
-        overflow: hidden;
-        display: block;
-        padding-top: 15px;
-
-        .carousel-track {
-          display: flex;
-          gap: 10px;
-          transition: transform 0.5s ease;
-        }
-
-        
-        .carousel-track > div {
-          border-radius: 15px;
-          display: flex;
-          flex-direction: column;
-          align-items: start;
-          justify-content: flex-start;
-          padding: 20px;
-          transition: transform 0.3s, box-shadow 0.3s;
-          min-width: 320px; 
-
-          a {
-            text-decoration: none;
-            color: inherit;
-            display: block;
-          }
-
-          img {
-            width: 40px;
-            height: 40px;
-            margin-bottom: 10px;
-          }
-
-          h2 {
-            font-size: 20px;
-            color: #fff;
-            text-align: left;
-            margin: 0;
-            font-weight: 600;
-          }
-
-          &:nth-child(1) { background-color: #39B54A; }
-          &:nth-child(2) { background-color: #0071BC; }
-          &:nth-child(3) { background-color: #39B54A; }
-        }
-
-        .carousel-indicators {
-          display: flex;
-          justify-content: center;
-          margin-top: 15px;
-          gap: 10px;
-
-          .dot {
-          width: 12px;
-          height: 12px;
-          border-radius: 50%;
-          background-color: #ccc;
-          cursor: pointer;
-
-          &.active {
-            background-color: #39B54A;
-          }
-        }
-      }
-    }
-
-    }
+      } 
+    } 
+  } 
 } 
-}
+
+
+
+
 

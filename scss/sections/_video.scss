@@ -64,6 +64,9 @@
                     position: absolute;
                     display: block;
                     padding: 77px 130px 76px 131px;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
                 }
             }
 
@@ -91,16 +94,96 @@
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1439px) and (min-width: 1200px) {
+    .video {
+        .main-block {
+            .text {
+                h1 {
+                    font-size: 3vw;
+                }
+                p {
+                    font-size: 1.3vw;
+                }
+                .button {
+                    button {
+                        font-size: 1vw;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 900px) {
+    .video {
+        padding: 20px 20px 40px 20px;
+        .main-block {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            grid-template-rows: repeat(2, 1fr);
+
+            .text {
+                h1 {
+                    font-size: 4vw;
+                }
+                p {
+                    font-size: 2vw;
+                }
+                .button {
+                    button {
+                        font-size: 1.6vw;
+                    }
+                }
+            }
+
+            .mob {
+                display: none;
+            }
+        }
+        .main-block-mob {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 900px) and (min-width: 650px) {
+    .video {
+        padding: 20px 20px 40px 20px;
+        .main-block {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            grid-template-rows: repeat(4, 1fr);
+
+            .text {
+                h1 {
+                    font-size: 4vw;
+                }
+                p {
+                    font-size: 2.5vw;
+                }
+                .button {
+                    button {
+                        font-size: 2.2vw;
+                    }
+                }
+            }
+        }
+        .main-block-mob {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 650px) {
     .video {
         padding: 20px 20px 40px 20px;
 
-        /* скрываем ПК-версию */
         .main-block {
             display: none;
         }
 
-        /* показываем мобильную */
         .main-block-mob {
             display: block;
 

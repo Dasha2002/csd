@@ -64,7 +64,7 @@
             </div>
         </div>
 
-        <div class="block-video">
+        <div class="block-video mob">
             <div class="img">
                 <img src="/assets/img/icon-video.svg">
             </div>
@@ -75,7 +75,7 @@
             </div>
         </div>
 
-        <div class="block-video">
+        <div class="block-video mob">
             <div class="img">
                 <img src="/assets/img/icon-video.svg">
             </div>

@@ -10,9 +10,12 @@
                     <img src="/assets/img/Rectangle 18.svg" alt="Передний план">
                 </div>
 
+                <div class="gradient"></div>
+
                 <div class="text-overlay">
                     <h2>Банкротство физических лиц</h2>
-                    <p>Мы поможем избавиться от кредитов и<br> микрозаймов на основе закона №127-<br> ФЗ</p>
+                    <p>Мы поможем избавиться от кредитов и микрозаймов на основе закона №127-<br> ФЗ</p>
+                    <p class="mob-p">Мы поможем избавиться от кредитов и<br> микрозаймов на основе закона<br> №127- ФЗ</p>
                 </div>
 
                 <div class="btn-overlay">
@@ -23,7 +26,7 @@
             </div>
 
             <div class="block-2-first-row">
-                <a hreef="#">
+                <a href="#">
                     <div class="overlay-img">
                         <img src="/assets/img/font-services.svg">
                     </div>
@@ -48,6 +51,7 @@
                 <div class="text-overlay">
                     <h2>Банкротство физических лиц</h2>
                     <p>Мы поможем избавиться от кредитов и<br> микрозаймов на основе закона №127-<br> ФЗ</p>
+                    <p class="tablet">Мы поможем избавиться от кредитов и микрозаймов на основе закона №127- ФЗ</p>
                 </div>
 
                 <div class="btn-overlay">
@@ -58,7 +62,7 @@
             </div>
 
             <div class="block-2-first-row">
-                <a hreef="#">
+                <a href="#">
                     <div class="overlay-img">
                         <img src="/assets/img/main-services-one.svg">
                     </div>

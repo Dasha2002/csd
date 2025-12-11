@@ -145,20 +145,174 @@
             transition: all .4s ease;
         }
 
-.extra-articles.open {
-    max-height: 2000px;
-    opacity: 1;
-}
-
-
+        .extra-articles.open {
+            max-height: 2000px;
+            opacity: 1;
+        }
 
     }
 
 }
 
+@media screen and (max-width: 1200px) and (min-width: 900px) {
+    .base {
+        .knowledge-base {
+            .container {
+                padding-top: 40px;
+
+                .articles-grid {
+
+                    .article-card {
+                        height: auto;
+
+                        .article-content {
+                            .article-title {
+                                font-size: 2.2vw;
+                                padding-top: 0;
+                                padding-bottom: 5px;
+                            }
+                            .article-subtitle {
+                                font-size: 1.5vw;
+                            }
+                            .article-excerpt {
+                                font-size: 1.3vw;
+                                margin: 0;
+                                padding-top: 15px;
+                            }
+                        }
+
+                        .read-more-btn {
+                            padding: 15px 0 0 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}   
+
+@media screen and (max-width: 900px) and (min-width: 600px) {
+    .base {
+        .knowledge-base {
+            .container {
+                padding-top: 40px;
+
+                .articles-grid {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 20px;
+
+                    .article-card {
+                        height: auto;
+                        .article-content {
+                            .article-title {
+                                font-size: 3vw;
+                            }
+                            .article-subtitle {
+                                font-size: 2vw;
+                                padding-top: 5px;
+                            }
+                            .article-excerpt {
+                                font-size: 1.9vw;
+                                margin: 0;
+                                padding-top: 10px;
+                                padding-bottom: 10px;
+                            }
+                        }
+
+                        .read-more-btn {
+                            padding: 0;
+                        }
+                    }
 
 
-@media screen and (max-width: 650px) {
+                    .thre {
+                        display: none;
+                    }
+
+                    .extra-articles {
+                        .articles-grid {
+                            padding-top: 0;
+                            .article-card {
+                        height: auto;
+                        .article-content {
+                            .article-title {
+                                font-size: 3vw;
+                            }
+                            .article-subtitle {
+                                font-size: 2vw;
+                            }
+                            .article-excerpt {
+                                font-size: 1.9vw;
+                                margin: 0;
+                                padding-top: 10px;
+                                padding-bottom: 10px;
+                            }
+                        }
+
+                        .read-more-btn {
+                            padding: 0;
+                        }
+                    }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) and (min-width: 500px) {
+    .knowledge-base {
+        .container {
+            padding: 34px 20px 30px;
+
+            .search-section {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 20px;
+                .knowledge-title {
+                    font-size: 28px;
+                    font-weight: 600;
+                }
+            }
+
+            .articles-grid {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 20px;
+                .article-card {
+                    height: auto;
+                    .article-content {
+                        .article-title {
+                            font-size: 22px;
+                            padding-bottom: 5px;
+                        }
+                        .article-subtitle {
+                            font-size: 18px;
+                        }
+                        .article-excerpt {
+                            font-size: 20px;
+                        }
+                    }
+                    .read-more-btn {
+                        padding: 0;
+                    }
+                }
+            }
+        }
+
+        .view-all-section {
+            .view-all-link {
+                width: 86%;
+                font-size: 20px;
+            }
+        }
+        
+    }
+}
+
+@media screen and (max-width: 500px) {
     .knowledge-base {
         .container {
             padding: 34px 20px 30px;

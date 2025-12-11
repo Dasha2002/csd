@@ -4,6 +4,7 @@ footer {
     width: 100%;
     height: 347px;
     background: url("/assets/img/footer-group.png");
+    background-size: cover;
 
     .footer-container {
         padding: 40px 40px 0 40px;
@@ -143,21 +144,267 @@ footer {
     }
 }
 
+@media screen and (max-width: 1430px) and (min-width: 1100px) {
+    
+}
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1430px) and (min-width: 900px) {
+
     footer {
         height: auto;
-        width: 100%;
-        background: url("/assets/img/footer-group-mob.png");
+        background-size: cover;
+
+        .footer-container {
+            padding: 30px;
+            grid-template-columns: 260px 220px 1fr;
+            column-gap: 50px;
+        }
+
+        /* ——— ЛЕВАЯ КОЛОНКА ——— */
+        .footer-column-one {
+            max-width: 260px;
+
+            img {
+                width: 160px;
+            }
+
+            .block-map {
+                padding: 15px 0 20px 0;
+
+                img {
+                    width: 20px;
+                }
+
+                .text-map {
+                    font-size: 1.3vw !important;
+                }
+            }
+
+            .text {
+                font-size: 1.3vw !important;
+                padding-bottom: 20px;
+            }
+
+            .btn-footer {
+                padding: 12px 15px;
+                font-size: 13px !important;
+            }
+        }
+
+        .footer-column-two {
+
+            nav {
+                grid-template-columns: repeat(2, 1fr);
+                column-gap: 50px !important;
+
+                .footer__menu-link {
+                    font-size: 1.3vw !important;
+                    white-space: nowrap !important;
+                }
+
+                .one, .two {
+                    gap: 10px;
+
+                }
+            }
+        }
+
+        /* ——— ПРАВАЯ КОЛОНКА (КОНТАКТЫ) ——— */
+        .footer-column-three {
+            padding-left: 30px !important;
+
+            .footer__contacts {
+
+                .footer__contact-link {
+                    font-size: 3vw !important;
+                }
+
+                .footer__contact-link-two {
+                    font-size: 20px;
+                }
+
+                .footer__contact-link-three {
+                    font-size: 20px;
+                }
+            }
+
+            .footer__socials {
+                padding-top: 10px;
+
+                .text-socials {
+                    font-size: 12px;
+                }
+
+                .block-icon img {
+                    width: 34px;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 900px) and (min-width: 450px) {
+    footer {
+       width: 100%;
+       height: auto; 
+       background-color: #282828;
+       
 
         .footer-container {
             display: none;
         }
         .mob {
+            position: relative;
            padding: 40px 20px;
            display: grid;
            grid-template-columns: 1fr;
            gap: 30px;
+
+           .img {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                z-index: 0;
+                img {
+                    display: block;
+                    width: auto;   // или нужный %
+                    height: auto;
+                }
+           }
+
+            .footer-column-one,
+            .footer-column-two,
+            .footer-column-three {
+                position: relative;
+                z-index: 2;   // вот это поднимает их над картинкой
+            }
+
+            .mob-bottom {
+                display: none;
+            }
+           .footer-column-one {
+            max-width: 100%;
+            .block-map {
+                p {
+                    font-size: 16px;
+                }
+            }
+            .text {
+                font-size: 16px;
+            }
+
+            .btn-footer {
+                
+                font-size: 18px;
+            }
+           }
+
+           .bottom {
+                display: flex;
+                flex-direction: row;
+                align-items: flex-end;
+                justify-content: space-between;
+            .footer-column-three {
+                padding: 0;
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+
+            .footer__contacts {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+
+                .footer__contact-link {
+                    font-size: 32px;
+                    font-weight: 700;
+                }
+                .footer__contact-link-two {
+                    font-size: 24px;
+                    font-weight: 700;
+                }
+                .footer__contact-link-three {
+                    font-size: 24px;
+                    font-weight: 700;
+                }
+            }
+
+            .footer__socials {
+                .text-socials {
+                    font-size: 14px;
+                    font-style: 500;
+                }
+            }
+           }
+
+           .footer-column-two {
+            
+            nav {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 30px;
+                position: relative;
+                z-index: 3;
+
+                .footer__menu-link {
+                    font-size: 2.7vw;
+                    font-weight: 500;
+                    color: white;
+                    margin: 0;
+                }
+
+            }
+            
+           }
+           }
+           
+
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    footer {
+       width: 100%;
+       height: auto; 
+       background-color: #282828;
+       
+
+        .footer-container {
+            display: none;
+        }
+        .mob {
+            position: relative;
+           padding: 40px 20px;
+           display: grid;
+           grid-template-columns: 1fr;
+           gap: 30px;
+
+           .img {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                z-index: 0;
+                img {
+                    display: block;
+                    width: auto;   // или нужный %
+                    height: auto;
+                }
+           }
+
+           .footer-column-one,
+            .footer-column-two,
+            .footer-column-three {
+                position: relative;
+                z-index: 2;   // вот это поднимает их над картинкой
+            } 
+
+
+            .bottom {
+                display: none;
+            }
 
            .footer-column-one {
             max-width: 100%;
@@ -178,6 +425,7 @@ footer {
 
            .footer-column-three {
             padding: 0;
+            padding-bottom: 30px;
             margin: 0;
             display: flex;
             flex-direction: column;

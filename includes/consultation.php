@@ -33,6 +33,15 @@
                             </div>
                         </div>
 
+                        <div class="checkbox-block-new">
+                            <label class="checkbox-wrapper">
+                                <input type="checkbox" class="checkbox-input" id="data-consent">
+                                <span class="checkbox-custom"></span>
+                            </label>
+
+                            <span class="checkbox-text">Даю согласие на обработку персональных данных</span>
+                        </div>
+
                     </div>
 
                     <div class="form-footer">
@@ -96,6 +105,15 @@
                                 <img src="/assets/img/form-btn-two.svg" alt="">
                             </button>
                         </div>
+                    </div>
+
+                    <div class="checkbox-block two">
+                        <label class="checkbox-wrapper">
+                            <input type="checkbox" class="checkbox-input" id="data-consent">
+                            <span class="checkbox-custom"></span>
+                        </label>
+
+                        <span class="checkbox-text">Даю согласие на обработку персональных данных</span>
                     </div>
 
                 </div>

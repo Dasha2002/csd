@@ -70,16 +70,146 @@
 
         .img {
             position: absolute;
-        right: 60px;
-        top: 50%;
-        transform: translateY(-50%); 
+            right: 60px;
+            top: 50%;
+            transform: translateY(-50%); 
             img {
                 display: block;
-            max-width: 100%;
-            height: auto;
+                max-width: 100%;
+                height: auto;
             }
             
         }
     }
 
+}
+
+@media screen and (max-width: 1150px) and (min-width: 900px) {
+    .bunk-5-section {
+        .shadow-img {
+            bottom: 20px;
+        }
+        .block-bunck-5 {
+            h1 {
+                font-size: 3.5vw;
+            }
+            .list {
+                h2 {
+                    font-size: 2vw;
+                }
+                ul {
+                    li {
+                        font-size: 2vw;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 900px) and (min-width: 800px) {
+    .bunk-5-section {
+        .shadow-img {
+            bottom: 30px;
+        }
+        .block-bunck-5 {
+            padding: 40px;
+            h1 {
+                font-size: 3.4vw;
+            }
+            .list {
+                h2 {
+                    font-size: 2vw;
+                }
+                ul {
+                    li {
+                        font-size: 2vw;
+                    }
+                }
+            }
+            .img {
+                right: 0;
+                img {
+                    width: 90%;
+                    height: auto;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 800px) and (min-width: 700px) {
+    .bunk-5-section {
+        padding: 60px 30px;
+        .shadow-img {
+            bottom: 36px;
+        }
+
+        .block-bunck-5 {
+            padding: 30px;
+
+            h1 {
+                font-size: 3.6vw;
+            }
+            .list {
+                h2 {
+                    font-size: 2.2vw;
+                }
+                ul {
+                    li {
+                        font-size: 2.2vw;
+                    }
+                }
+            }
+            .img {
+                right: -20px;
+                img {
+                    width: 80%;
+                    height: auto;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 700px) and (min-width: 600px) {
+    .bunk-5-section {
+        padding: 60px 30px;
+        .shadow-img {
+            bottom: 40px;
+        }
+
+        .block-bunck-5 {
+            padding: 30px;
+
+            h1 {
+                font-size: 3.6vw;
+            }
+            .list {
+                h2 {
+                    font-size: 2.5vw;
+                }
+                ul {
+                    li {
+                        font-size: 2.5vw;
+                    }
+                }
+
+                .btn {
+                    .btn-bunk-5 {
+                        padding: 15px;
+                        font-size: 2.7vw;
+                    }
+                }
+            }
+            .img {
+                top: 57%;
+                right: -60px;
+                img {
+                    width: 70%;
+                    height: auto;
+                }
+            }
+        }
+    }
 }

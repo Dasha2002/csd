@@ -21,3 +21,16 @@
         }
     }
 }
+
+@media screen and (max-width: 1000px) {
+    .cases-1 {
+        .block-cases {
+            h1 {
+                font-size: 5.5vw;
+            }
+            p {
+                font-size: 1.7vw;
+            }
+        }
+    }
+}

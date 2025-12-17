@@ -86,4 +86,246 @@
             }
         }
     }
+
+    .block-bunk-4-mob {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1440px) and (min-width: 1150px) {
+    .bunk-4-section {
+        .block-bunk-4 {
+            h1 {
+                font-size: 3.8vw;
+            }
+            .block {
+                .block-one {
+                    h2 {
+                        font-size: 1.5vw;
+                    }
+
+                    .group {
+                        .block-group {
+                            .text {
+                                h3 {
+                                    font-size: 1.4vw;
+                                }
+                                p {
+                                    font-size: 1vw;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .block-two {
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1150px) and (min-width: 1000px) {
+    .bunk-4-section {
+        .block-bunk-4 {
+            h1 {
+                font-size: 3.4vw;
+            }
+            .block {
+                .block-one {
+                    
+                    h2 {
+                        font-size: 1.3vw;
+                    }
+
+                    .group {
+                        .block-group {
+                            padding: 15px;
+                            .text {
+                                h3 {
+                                    font-size: 1.3vw;
+                                }
+                                p {
+                                    font-size: 1vw;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .block-two {
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) and (min-width: 900px) {
+    .bunk-4-section {
+        .block-bunk-4 {
+            h1 {
+                font-size: 3.4vw;
+            }
+            .block {
+                .block-one {
+                    h2 {
+                        font-size: 1.3vw;
+                        padding-bottom: 15px;
+                    }
+
+                    .group {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 20px;
+                        .block-group {
+                            padding: 15px;
+                            margin: 0 !important;
+                            .text {
+                                h3 {
+                                    font-size: 1.3vw;
+                                }
+                                p {
+                                    font-size: 1.1vw;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .block-two {
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 900px) and (min-width: 700px) {
+    .bunk-4-section {
+        .block-bunk-4 {
+            padding: 40px 20px;
+            h1 {
+                font-size: 3.4vw;
+            }
+            .block {
+                .block-one {
+                    h2 {
+                        font-size: 1.3vw;
+                        padding-bottom: 15px;
+                    }
+
+                    .group {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 20px;
+                        .block-group {
+                            padding: 15px;
+                            margin: 0 !important;
+                            .text {
+                                h3 {
+                                    font-size: 1.7vw;
+                                }
+                                p {
+                                    font-size: 1.5vw;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .block-two {
+                    img {
+                        width: 100%;
+                        padding-top: 20%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 700px) and (min-width: 500px) {
+    .bunk-4-section {
+        .block-bunk-4 {
+            display: none;
+        }
+        .block-bunk-4-mob {
+            display: block ;
+            padding: 30px 20px;
+                h1 {
+                    font-size: 3.7vw;
+                    margin: 0;
+                }
+            
+            .block {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+                .block-one {
+                    
+                    h2 {
+                        font-size: 1.8vw;
+                        padding-bottom: 15px;
+                    }
+
+                    .group {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 20px;
+
+                        .block-group {
+                            padding: 15px;
+                            margin: 0 !important;
+                            background: linear-gradient(to right, #DDE3E8, #EFF6FD);
+                            border-radius: 15px;
+                            display: flex;
+                            flex-direction: row;
+                            align-items: flex-start; 
+
+                            img {
+                                width: 20px;
+                                height: 20px;
+                            }
+                            .text {
+                                padding-left: 15px;
+                                padding-right: 0;
+                                h3 {
+                                    font-size: 1.7vw;
+                                    margin: 0;
+                                    padding-bottom: 10px;
+                                }
+                                p {
+                                    font-size: 1.9vw;
+                                    margin: 0;
+                                }
+                            }
+
+                            &:nth-child(2) {
+                                width: 170%;
+                            }
+
+                            &:nth-child(3) {
+                                width: 170%;
+                            }
+                        }
+                    }
+                }
+
+                .block-two {
+                    img {
+                        width: 100%;
+                        
+                    }
+                }
+            }
+        }
+    }
 }

@@ -54,3 +54,86 @@
         }
     }
 }
+
+@media screen and (max-width: 1350px) and (min-width: 1000px) {
+    .article-1 {
+        .block-article {
+            .block-1 {
+                h1 {
+                    font-size: 5vw;
+                }
+                p {
+                    font-size: 1.6vw;
+                }
+            }
+            .block-2 {
+                h2 {
+                    font-size: 1.8vw;
+                }
+                p {
+                    font-size: 1.6vw;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) and (min-width: 700px) {
+    .article-1 {
+        .block-article {
+            .block-1 {
+                h1 {
+                    font-size: 4vw;
+                }
+                p {
+                    font-size: 1.7vw;
+                }
+            }
+            .block-2 {
+                h2 {
+                    font-size: 1.8vw;
+                }
+                p {
+                    font-size: 1.6vw;
+                }
+                .btn {
+                    a {
+                        font-size: 1.6vw;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 700px) and (min-width: 500px) {
+    .article-1 {
+        .block-article {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+            .block-1 {
+                h1 {
+                    font-size: 6vw;
+                    padding-bottom: 15px;
+                }
+                p {
+                    font-size: 2vw;
+                }
+            }
+            .block-2 {
+                h2 {
+                    font-size: 2.5vw;
+                }
+                p {
+                    font-size: 2vw;
+                }
+                .btn {
+                    a {
+                        font-size: 2vw;
+                    }
+                }
+            }
+        }
+    }
+}

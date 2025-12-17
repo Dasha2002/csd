@@ -830,9 +830,9 @@
 
                 img {
                     width: auto;
-            height: 100%;
-            display: block;      // убрать inline особенности
-            margin: 0 auto;
+                    height: 100%;
+                    display: block;     
+                    margin: 0 auto;
                 }
             }
 
@@ -941,6 +941,10 @@
                                     font-size: 16px;
                                 }
                             }
+                        }
+
+                        .two {
+                            display: none;
                         }
                     }
 

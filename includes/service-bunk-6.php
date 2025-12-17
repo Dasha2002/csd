@@ -8,7 +8,7 @@
                 <a href="#">
                     <div>
                         <img src="/assets/img/detail-icon.svg">
-                        <h2>Сопровождение<br> банкротства</h2>
+                        <h2>Сопровождение банкротства</h2>
                     </div>
                 </a>
             </div>
@@ -16,7 +16,7 @@
                 <a href="#">
                     <div>
                         <img src="/assets/img/detail-icon.svg">
-                        <h2>Дистанционное<br> банкротство</h2>
+                        <h2>Дистанционное банкротство</h2>
                     </div>
                 </a>
             </div>

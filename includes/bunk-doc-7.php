@@ -6,7 +6,7 @@
                 <h1>Выигранные дела</h1>
             </div>
             <div class="btn">
-                <button>Посмотреть все дела</button>
+                <a href="completed-cases.php">Посмотреть все дела</a>
             </div>
         </div>
 

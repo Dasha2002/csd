@@ -25,12 +25,58 @@
         }
 
         .text {
+            padding: 0 40px;
             p {
                 margin: 0;
                 padding-top: 20px;
                 font-size: 18px;
                 font-weight: 500;
                 color: #282828;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1080px) and (min-width: 700px) {
+    .reviws-1 {
+        .block-reviws {
+            .text-head {
+                h1 {
+                    font-size: 5.5vw;
+                }
+                h2 {
+                    font-size: 5vw;
+                }
+            }
+            .text {
+                p {
+                    font-size: 2vw;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .reviws-1 {
+        
+        .block-reviws {
+            .text-head {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                h1 {
+                    font-size: 6vw;
+                }
+                h2 {
+                    font-size: 5.2vw;
+                }
+            }
+            .text {
+                padding: 0;
+                p {
+                    font-size: 2.7vw;
+                }
             }
         }
     }

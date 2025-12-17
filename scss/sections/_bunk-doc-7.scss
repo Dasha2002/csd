@@ -1,5 +1,5 @@
 .bunk-doc-7 {
-    padding: 60px 40px 30px 40px;
+    padding: 60px 40px 60px 40px;
 
     .block-7 {
         display: flex;
@@ -9,7 +9,10 @@
             display: flex;
             flex-direction: row;
             justify-content: space-between;
+            align-items: center;
             padding-bottom: 30px;
+            padding-left: 0;
+            padding-right: 0;
 
             .text-1 {
                 h1 {
@@ -21,7 +24,8 @@
             }
 
             .btn {
-                button {
+                a {
+                    text-decoration: none;
                     padding: 15px 20px;
                     border-radius: 10px;
                     background-color: #39B54A;
@@ -48,7 +52,10 @@
                     position: relative;
                     height: 350px;
                     background-image: url("/assets/img/Rectangle 33.png");
+                    background-position: center top;
                     background-size: cover;
+                    background-repeat: no-repeat;
+                    border-radius: 15px 15px 0 0;
 
                     img {
                         position: absolute;
@@ -101,6 +108,152 @@
                         }
 
                     }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 1000px) {
+    .bunk-doc-7 {
+        .block-7 {
+            .text {
+                padding-bottom: 40px;
+                .text-1 {
+                    h1 {
+                        font-size: 3vw;
+                    }
+                }
+            }
+            .doc-block {
+                
+                .block {
+                    .doc-img {
+                        position: relative;
+                        height: 250px;
+                        background-image: url("/assets/img/Rectangle 33.png");
+                        background-position: center top;
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        img {
+                            padding: 200px 0 0 10px;
+                            width: 70%;
+                        }
+                    }
+
+                    .text-block {
+                        .text-num {
+                            .text {
+                                font-size: 1.3vw;
+                            }
+                            .sum {
+                                font-size: 1.7vw;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) and (min-width: 650px) {
+    .bunk-doc-7 {
+        padding: 50px 40px;
+        .block-7 {
+            .text {
+                padding-bottom: 40px;
+                .text-1 {
+                    h1 {
+                        font-size: 3.5vw;
+                    }
+                }
+                .btn {
+                    a {
+                        font-size: 2vw;
+                    }
+                }
+            }
+
+            .doc-block {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+                padding-top: 40px;
+
+                .block {
+                    .text-block {
+                        .text-doc {
+                            h2 {
+                                font-size: 2vw;
+                            }
+                            h3 {
+                                font-size: 2.6vw;
+                            }
+                        }
+                        .text-num {
+                            padding-right: 10px;
+                            .text {
+                                font-size: 1.9vw;
+                            }
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 650px) and (min-width: 500px) {
+    .bunk-doc-7 {
+        padding: 50px 20px;
+        .block-7 {
+            .text {
+                padding-bottom: 40px;
+                .text-1 {
+                    h1 {
+                        font-size: 3.7vw;
+                    }
+                }
+                .btn {
+                    a {
+                        font-size: 2vw;
+                    }
+                }
+            }
+
+            .doc-block {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 15px;
+                padding-top: 40px;
+
+                .block {
+                    .doc-img {
+                        height: 200px;
+                        img {
+                            padding: 160px 0 0 10px;
+                            width: 65%;
+                        }
+                    }
+                    .text-block {
+                        .text-doc {
+                            h2 {
+                                font-size: 2.3vw;
+                            }
+                            h3 {
+                                font-size: 2.9vw;
+                            }
+                        }
+                        .text-num {
+                            
+                            .text {
+                                font-size: 2vw;
+                            }
+                        }
+                    }
+                    
                 }
             }
         }

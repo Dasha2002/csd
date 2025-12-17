@@ -1,12 +1,10 @@
 .services {
-    
-
     .conteiner {
-        padding: 20px 40px 60px 80px;
+        padding: 20px 20px 20px 40px;
         display: grid;
         grid-template-columns: 470px 1fr; 
         align-items: end;
-        gap: 40px;
+        
 
         .conteiner-text {
             height: 285px;
@@ -58,7 +56,7 @@
         .img {
             position: relative; 
             width: 100%;    
-            height: 285px;  
+            height: auto;  
 
             div {
                 position: absolute;
@@ -74,16 +72,260 @@
             .img-2 {
                 z-index: 2;
                 bottom: 0px;
-                right: 20px; 
+                left: 50%;
+                transform: translateX(-50%); 
             }
 
             .img-3 {
                 z-index: 1;
                 bottom: 0;
-                right: 0; 
+                left: 70%;
+                transform: translateX(-50%); 
             }
         }
 
     }
  
+}
+
+@media screen and (max-width: 1400px) and (min-width: 1350px) {
+    .services {
+        .conteiner {
+            .conteiner-text {
+                .text-one {
+                    font-size: 1.7vw;
+                }
+                h1 {
+                    font-size: 4.2vw;
+                }
+                .btn {
+                    .btn-services {
+                        font-size: 1.3vw;
+                    }
+                }
+                .text-two {
+                    font-size: 1.3vw;
+                }
+            }
+
+            .img {
+                width: 90%;
+
+                .img-1 {
+                    width: 80%;
+                    img {
+                        width: 90%;
+                        
+                    }
+                }
+                .img-2 {
+                    width: 100%;
+                    img {
+                        width: 110%; 
+                        
+                    }
+                }
+                .img-3 {
+                    width: 90%;
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1350px) and (min-width: 1250px) {
+    .services {
+        .conteiner {
+            .conteiner-text {
+                .text-one {
+                    font-size: 1.7vw;
+                }
+                h1 {
+                    font-size: 4.2vw;
+                }
+                .btn {
+                    .btn-services {
+                        font-size: 1.3vw;
+                    }
+                }
+                .text-two {
+                    font-size: 1.3vw;
+                }
+            }
+
+            .img {
+                width: 90%;
+
+                .img-1 {
+                    width: 80%;
+                    img {
+                        width: 90%;
+                        padding-bottom: 25px;
+                    }
+                }
+                .img-2 {
+                    width: 100%;
+                    img {
+                        width: 110%; 
+                        padding-bottom: 25px;
+                    }
+                }
+                .img-3 {
+                    width: 90%;
+                    img {
+                        width: 100%;
+                        padding-bottom: 25px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1250px) and (min-width: 1150px) {
+    .services {
+        .conteiner {
+            .conteiner-text {
+                .text-one {
+                    font-size: 1.7vw;
+                }
+                h1 {
+                    font-size: 4.2vw;
+                }
+                .btn {
+                    .btn-services {
+                        font-size: 1.3vw;
+                    }
+                }
+                .text-two {
+                    font-size: 1.3vw;
+                }
+            }
+
+            .img {
+                width: 90%;
+
+                .img-1 {
+                    width: 80%;
+                    img {
+                        width: 90%;
+                        padding-bottom: 40px;
+                    }
+                }
+                .img-2 {
+                    width: 100%;
+                    img {
+                        width: 110%; 
+                        padding-bottom: 40px;
+                    }
+                }
+                .img-3 {
+                    width: 90%;
+                    img {
+                        width: 100%;
+                        padding-bottom: 40px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1150px) and (min-width: 1100px) {
+    .services {
+        .conteiner {
+            .conteiner-text {
+                padding-top: 20px;
+                .text-one {
+                    font-size: 1.7vw;
+                }
+                h1 {
+                    font-size: 4.2vw;
+                }
+                .btn {
+                    .btn-services {
+                        font-size: 1.3vw;
+                    }
+                }
+                .text-two {
+                    font-size: 1.3vw;
+                }
+            }
+
+            .img {
+                width: 90%;
+
+                .img-1 {
+                    width: 80%;
+                    img {
+                        width: 90%;
+                        padding-bottom: 80px;
+                    }
+                }
+                .img-2 {
+                    width: 100%;
+                    img {
+                        width: 110%; 
+                        padding-bottom: 80px;
+                    }
+                }
+                .img-3 {
+                    width: 90%;
+                    img {
+                        width: 100%;
+                        padding-bottom: 80px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1100px) and (min-width: 900px) {
+    .services {
+        .conteiner {
+            .conteiner-text {
+                padding-top: 20px;
+                .text-one {
+                    font-size: 1.7vw;
+                }
+                h1 {
+                    font-size: 4.2vw;
+                }
+                .btn {
+                    .btn-services {
+                        font-size: 1.3vw;
+                    }
+                }
+                .text-two {
+                    font-size: 1.3vw;
+                }
+            }
+
+            .img {
+                width: 90%;
+                
+                .img-1 {
+                    width: 80%;
+                    img {
+                        width: 90%;
+                        padding-bottom: 30%;
+                    }
+                }
+                .img-2 {
+                    width: 100%;
+                    img {
+                        width: 110%; 
+                        padding-bottom: 30%;
+                    }
+                }
+                .img-3 {
+                    display: none;
+                }
+            }
+        }
+    }
 }

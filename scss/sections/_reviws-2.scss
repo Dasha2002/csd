@@ -22,8 +22,12 @@
 
                 img {
                     position: absolute;
-                    display: block;
-                    padding: 77px 130px 76px 131px;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    padding: 0;      
+                    width: 64px;     
+                    height: 64px;
                 }
             }
 
@@ -43,6 +47,26 @@
                     color:#39B54A;
                 }
             }
+        }
+    }
+}
+
+
+@media screen and (max-width: 900px) and (min-width: 600px) {
+    .reviws-2 {
+        .main-block {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .reviws-2 {
+        padding: 50px 60px;
+        .main-block {
+            display: grid;
+            grid-template-columns: 1fr;
         }
     }
 }

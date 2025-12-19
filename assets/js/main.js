@@ -134,6 +134,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // Проверяем все элементы счетчика
         if (btnPlus && btnMinus && textSum) {
             let currentValue = 0;
+            
 
             function updateDisplay() {
                 textSum.textContent = currentValue;
@@ -141,12 +142,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
             btnPlus.addEventListener("click", () => {
                 currentValue += 5000;
+                textSum.classList.add("active");
                 updateDisplay();
             });
 
             btnMinus.addEventListener("click", () => {
                 if (currentValue >= 5000) {
                     currentValue -= 5000;
+                    textSum.classList.add("active");
                     updateDisplay();
                 }
             });
@@ -156,13 +159,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // video кнопка перехода на страницу отзывы
 document.addEventListener("DOMContentLoaded", () => {
-    const reviewsBtn = document.getElementById("reviews-btn");
-    if (reviewsBtn) {
-        reviewsBtn.addEventListener("click", () => {
+    const reviewsBtns = document.querySelectorAll(".reviews-btn");
+    reviewsBtns.forEach(btn => {
+        btn.addEventListener("click", () => {
             window.location.href = "reviws.php";
         });
-    }
+    });
 });
+
 
 // Мобильное меню
 document.addEventListener('DOMContentLoaded', function() {
@@ -188,79 +192,57 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // КАРУСЕЛЬ для услуг 
-const container = document.querySelector('.block-two-mobile');
-if (container) { // Проверяем, существует ли контейнер
-    const track = container.querySelector('.carousel-track');
-    const dots = container.querySelectorAll('.dot');
-    const items = [...track.children];
+document.addEventListener('DOMContentLoaded', () => {
 
-    if (track && dots.length > 0 && items.length > 0) {
-        let currentIndex = 0;
+  const servicesSwiper = new Swiper('.services-swiper', {
+    slidesPerView: 'auto',   
+    spaceBetween: 10,        
+    allowTouchMove: false,
+    loop: false,
+    speed: 500,
+  });
 
-        function getStep() {
-            const w = items[0].offsetWidth;
-            const gap = parseFloat(getComputedStyle(track).gap);
-            return w + gap;
-        }
+  servicesSwiper.update();
 
-        function updateCarousel() {
-            track.style.transform = `translateX(-${currentIndex * getStep()}px)`;
-            dots.forEach((dot, i) => dot.classList.toggle('active', i === currentIndex));
-        }
+  const dots = document.querySelectorAll('.carousel-indicators .dot');
 
-        // КЛИКИ по кружкам
-        dots.forEach(dot => {
-            dot.addEventListener('click', () => {
-                currentIndex = +dot.dataset.index;
-                updateCarousel();
-            });
-        });
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      const index = Number(dot.dataset.index);
 
-        updateCarousel();
-    }
-}
+      servicesSwiper.slideTo(index);
 
-// карусель для видео в мобильной версии
-const slider = document.querySelector('.main-block-mob .block');
-if (slider) { // Проверяем, существует ли слайдер
-    let isDown = false;
-    let startX;
-    let scrollLeft;
-
-    slider.addEventListener('mousedown', (e) => {
-        isDown = true;
-        slider.classList.add('active');
-        startX = e.pageX - slider.offsetLeft;
-        scrollLeft = slider.scrollLeft;
+      dots.forEach(d => d.classList.remove('active'));
+      dot.classList.add('active');
     });
+  });
 
-    slider.addEventListener('mouseleave', () => {
-        isDown = false;
-        slider.classList.remove('active');
-    });
+});
 
-    slider.addEventListener('mouseup', () => {
-        isDown = false;
-        slider.classList.remove('active');
-    });
 
-    slider.addEventListener('mousemove', (e) => {
-        if (!isDown) return;
-        e.preventDefault();
-        const x = e.pageX - slider.offsetLeft;
-        const walk = (x - startX) * 2;
-        slider.scrollLeft = scrollLeft - walk;
-    });
 
-    /* Touch события для телефонов */
-    slider.addEventListener('touchstart', (e) => {
-        startX = e.touches[0].clientX;
-        scrollLeft = slider.scrollLeft;
-    });
 
-    slider.addEventListener('touchmove', (e) => {
-        const x = e.touches[0].clientX;
-        const walk = (x - startX) * 2;
-        slider.scrollLeft = scrollLeft - walk;
+
+// video карусель
+document.addEventListener("DOMContentLoaded", () => {
+  if (window.innerWidth <= 650) {
+    new Swiper(".reviews-swiper", {
+      slidesPerView: "auto",
+      spaceBetween: 20,
+      freeMode: true,
+      grabCursor: true,
+      centeredSlides: false,
+      touchEventsTarget: "container",
+      
+      breakpoints: {
+        0: { slidesPerView: 1.1 },
+        480: { slidesPerView: 1.3 },
+        600: { slidesPerView: 1.5 },
+      },
     });
-}
+  }
+});
+
+
+
+

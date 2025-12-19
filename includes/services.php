@@ -157,41 +157,53 @@
 
         <!--МОБИЛЬНАЯ-->
         <div class="block-two-mobile">
-            <div class="carousel-track">
-                <div class="block-3-second-row">
-                    <a href="#">
-                        <div>
-                            <img src="/assets/img/detail-icon.svg" alt="">
-                            <h2>Банкротство с гарантией</h2>
-                        </div>
-                    </a>
-                </div>
+            <div class="swiper services-swiper">
+                <div class="swiper-wrapper">
 
-                <div class="block-4-second-row">
-                    <a href="#">
-                        <div>
-                            <img src="/assets/img/detail-icon.svg" alt="">
-                            <h2>Банкротство в рассрочку</h2>
+                    <div class="swiper-slide">
+                        <div class="block-3-second-row">
+                            <a href="#">
+                                <div>
+                                    <img src="/assets/img/detail-icon.svg" alt="">
+                                    <h2>Банкротство с гарантией</h2>
+                                </div>
+                            </a>
                         </div>
-                    </a>
-                </div>
+                    </div>
 
-                <div class="block-5-second-row">
-                    <a href="#">
-                        <div>
-                            <img src="/assets/img/detail-icon.svg" alt="">
-                            <h2>Помощь должникам</h2>
+                    <div class="swiper-slide">
+                        <div class="block-4-second-row">
+                            <a href="#">
+                                <div>
+                                    <img src="/assets/img/detail-icon.svg" alt="">
+                                    <h2>Банкротство в рассрочку</h2>
+                                </div>
+                            </a>
                         </div>
-                    </a>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="block-5-second-row">
+                            <a href="#">
+                                <div>
+                                    <img src="/assets/img/detail-icon.svg" alt="">
+                                    <h2>Помощь должникам</h2>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
+            <!-- ТВОИ точки -->
             <div class="carousel-indicators">
                 <span class="dot active" data-index="0"></span>
                 <span class="dot" data-index="1"></span>
                 <span class="dot" data-index="2"></span>
             </div>
         </div>
+
 
         <!--МОБИЛЬНАЯ-->
 

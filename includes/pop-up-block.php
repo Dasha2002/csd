@@ -27,9 +27,14 @@
         <div class="form-footer">
           <div class="checkbox-block">
             <input type="checkbox" class="checkbox-input" id="data-consent">
+
             <label for="data-consent" class="checkbox-custom"></label>
-            <span class="checkbox-text">Даю согласие на обработку персональных<br> данных</span>
+
+            <label for="data-consent" class="checkbox-text">
+              Даю согласие на обработку персональных<br> данных
+            </label>
           </div>
+
           <div class="btn">
             <button type="submit">Отправить</button>
           </div>

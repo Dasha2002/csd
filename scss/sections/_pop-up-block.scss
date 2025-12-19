@@ -132,7 +132,7 @@ html.popup-open, body.popup-open {
               width: 28px;
               height: 28px;
               border: 1px solid #2828281A;
-              background-color: #39B54A;
+              background-color: #2828280D;
               border-radius: 4px;
               position: relative;
               cursor: pointer;
@@ -155,6 +155,11 @@ html.popup-open, body.popup-open {
               font-size: 14px;
               color: #282828;
               text-decoration: underline;
+            }
+
+            .checkbox-input:checked + .checkbox-custom {
+              background-color: #39B54A;
+              border-color: #39B54A;
             }
           }
 

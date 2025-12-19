@@ -37,9 +37,8 @@
                             <label class="checkbox-wrapper">
                                 <input type="checkbox" class="checkbox-input" id="data-consent">
                                 <span class="checkbox-custom"></span>
+                                <span class="checkbox-text">Даю согласие на обработку персональных данных</span>
                             </label>
-
-                            <span class="checkbox-text">Даю согласие на обработку персональных данных</span>
                         </div>
 
                     </div>
@@ -49,9 +48,10 @@
                             <label class="checkbox-wrapper">
                                 <input type="checkbox" class="checkbox-input" id="data-consent">
                                 <span class="checkbox-custom"></span>
+                                <span class="checkbox-text">Даю согласие на обработку персональных данных</span>
                             </label>
 
-                            <span class="checkbox-text">Даю согласие на обработку персональных данных</span>
+
                         </div>
 
                         <div class="btn">

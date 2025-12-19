@@ -101,6 +101,10 @@
                                     font-size: 16px;
                                     user-select: none;         
                                 }
+                                .counter-label.active {
+                                    opacity: 1;
+                                    color: #000000;
+                                }
                             }
                         }
                         .checkbox-block-new {
@@ -130,7 +134,7 @@
                             .checkbox-input {
                                 position: absolute;
                                 opacity: 0;
-                                pointer-events: none;
+                                
                             }
 
                             .checkbox-custom {
@@ -162,6 +166,7 @@
                             .checkbox-text {
                                 color: #ffffff;
                                 font-size: 14px;
+                                padding-left: 10px;
                             }
                         }
 

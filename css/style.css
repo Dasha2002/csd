@@ -795,64 +795,84 @@ button, input {
     display: none !important;
   }
   .services .block .block-two-mobile {
-    display: block !important;
-    margin-top: 20px;
+    position: relative;
+    overflow: hidden;
+    display: block;
+    padding-top: 15px;
   }
-  .services .block .block-two-mobile .carousel-track {
+  .services .block .block-two-mobile .services-swiper {
+    width: 100%;
+    overflow: hidden;
+  }
+  .services .block .block-two-mobile .swiper-wrapper {
     display: flex;
-    gap: 15px;
-    padding-bottom: 10px;
-    transition: transform 0.3s, box-shadow 0.3s;
-    height: 17vh;
   }
-  .services .block .block-two-mobile .carousel-track .block-3-second-row, .services .block .block-two-mobile .carousel-track .block-4-second-row, .services .block .block-two-mobile .carousel-track .block-5-second-row {
-    padding: 20px;
+  .services .block .block-two-mobile .swiper-slide {
+    width: calc(100% - 30px);
+    flex-shrink: 0;
   }
-  .services .block .block-two-mobile .carousel-track > div {
-    min-width: 93%;
-    padding: 20px;
+  .services .block .block-two-mobile {
+    /* ВАЖНО: стили применяются к твоим блокам */
+  }
+  .services .block .block-two-mobile .swiper-slide > div {
     border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: flex-start;
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 100%;
+    height: 140px;
+    box-sizing: border-box;
   }
-  .services .block .block-two-mobile .carousel-track > div a {
+  .services .block .block-two-mobile .swiper-slide > div a {
     text-decoration: none;
     color: inherit;
     display: block;
   }
-  .services .block .block-two-mobile .carousel-track > div img {
-    width: 50px;
-    height: 50px;
+  .services .block .block-two-mobile .swiper-slide > div img {
+    width: 45px;
+    height: 45px;
     margin-bottom: 10px;
   }
-  .services .block .block-two-mobile .carousel-track > div h2 {
-    font-size: 5vw;
+  .services .block .block-two-mobile .swiper-slide > div h2 {
+    font-size: 30px;
     color: #fff;
-    font-weight: 600;
+    text-align: left;
     margin: 0;
-    text-decoration: none;
+    font-weight: 600;
   }
-  .services .block .block-two-mobile .carousel-track .block-3-second-row {
-    background: #39B54A;
+  .services .block .block-two-mobile {
+    /* Цвета — как раньше */
   }
-  .services .block .block-two-mobile .carousel-track .block-4-second-row {
-    background: #0071BC;
+  .services .block .block-two-mobile .swiper-slide:nth-child(1) > div {
+    background-color: #39B54A;
   }
-  .services .block .block-two-mobile .carousel-track .block-5-second-row {
-    background: #39B54A;
+  .services .block .block-two-mobile .swiper-slide:nth-child(2) > div {
+    background-color: #0071BC;
+  }
+  .services .block .block-two-mobile .swiper-slide:nth-child(3) > div {
+    background-color: #39B54A;
+  }
+  .services .block .block-two-mobile {
+    /* ТВОИ точки */
   }
   .services .block .block-two-mobile .carousel-indicators {
     display: flex;
     justify-content: center;
-    margin-top: 12px;
-    gap: 8px;
+    margin-top: 15px;
+    gap: 10px;
   }
   .services .block .block-two-mobile .carousel-indicators .dot {
-    width: 20px;
-    height: 20px;
+    width: 17px;
+    height: 17px;
     border-radius: 50%;
-    background: #ccc;
+    background-color: #ccc;
+    cursor: pointer;
   }
   .services .block .block-two-mobile .carousel-indicators .dot.active {
-    background: #39B54A;
+    background-color: #39B54A;
   }
 }
 /* Планшеты: 900–1024px */
@@ -1085,12 +1105,21 @@ button, input {
     display: block;
     padding-top: 15px;
   }
-  body .services .block .block-two-mobile .carousel-track {
-    display: flex;
-    gap: 10px;
-    transition: transform 0.5s ease;
+  body .services .block .block-two-mobile .services-swiper {
+    width: 100%;
+    overflow: hidden;
   }
-  body .services .block .block-two-mobile .carousel-track > div {
+  body .services .block .block-two-mobile .swiper-wrapper {
+    display: flex;
+  }
+  body .services .block .block-two-mobile .swiper-slide {
+    width: calc(100% - 30px);
+    flex-shrink: 0;
+  }
+  body .services .block .block-two-mobile {
+    /* ВАЖНО: стили применяются к твоим блокам */
+  }
+  body .services .block .block-two-mobile .swiper-slide > div {
     border-radius: 15px;
     display: flex;
     flex-direction: column;
@@ -1098,33 +1127,40 @@ button, input {
     justify-content: flex-start;
     padding: 20px;
     transition: transform 0.3s, box-shadow 0.3s;
-    min-width: 320px;
+    width: 100%;
+    box-sizing: border-box;
   }
-  body .services .block .block-two-mobile .carousel-track > div a {
+  body .services .block .block-two-mobile .swiper-slide > div a {
     text-decoration: none;
     color: inherit;
     display: block;
   }
-  body .services .block .block-two-mobile .carousel-track > div img {
+  body .services .block .block-two-mobile .swiper-slide > div img {
     width: 40px;
     height: 40px;
     margin-bottom: 10px;
   }
-  body .services .block .block-two-mobile .carousel-track > div h2 {
+  body .services .block .block-two-mobile .swiper-slide > div h2 {
     font-size: 20px;
     color: #fff;
     text-align: left;
     margin: 0;
     font-weight: 600;
   }
-  body .services .block .block-two-mobile .carousel-track > div:nth-child(1) {
+  body .services .block .block-two-mobile {
+    /* Цвета — как раньше */
+  }
+  body .services .block .block-two-mobile .swiper-slide:nth-child(1) > div {
     background-color: #39B54A;
   }
-  body .services .block .block-two-mobile .carousel-track > div:nth-child(2) {
+  body .services .block .block-two-mobile .swiper-slide:nth-child(2) > div {
     background-color: #0071BC;
   }
-  body .services .block .block-two-mobile .carousel-track > div:nth-child(3) {
+  body .services .block .block-two-mobile .swiper-slide:nth-child(3) > div {
     background-color: #39B54A;
+  }
+  body .services .block .block-two-mobile {
+    /* ТВОИ точки */
   }
   body .services .block .block-two-mobile .carousel-indicators {
     display: flex;
@@ -2333,35 +2369,29 @@ button, input {
     font-size: 16px;
     margin: 0 0 20px 0;
   }
-  .video .main-block-mob {
-    /* КАРУСЕЛЬ */
-  }
-  .video .main-block-mob .block {
-    display: flex;
-    gap: 20px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
+  .video .main-block-mob .reviews-swiper {
+    width: 100%;
     padding-bottom: 10px;
-    /* убираем полоску */
-    scrollbar-width: none;
+    padding-left: 0;
+    padding-right: 20px;
   }
-  .video .main-block-mob .block::-webkit-scrollbar {
-    display: none;
+  .video .main-block-mob .reviews-swiper .swiper-wrapper {
+    display: flex;
   }
-  .video .main-block-mob .block .block-video {
-    scroll-snap-align: start;
+  .video .main-block-mob .reviews-swiper .swiper-slide {
+    width: 325px;
     flex-shrink: 0;
   }
-  .video .main-block-mob .block .block-video .img {
+  .video .main-block-mob .reviews-swiper .swiper-slide .block-video .img {
     position: relative;
     height: 217px;
-    width: 325px;
+    width: 100%;
     border-radius: 15px;
     background-image: url("/assets/img/image-video.png");
     background-size: cover;
+    background-position: center;
   }
-  .video .main-block-mob .block .block-video .img img {
+  .video .main-block-mob .reviews-swiper .swiper-slide .block-video .img img {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -2370,28 +2400,25 @@ button, input {
     height: 64px;
     padding: 0 !important;
   }
-  .video .main-block-mob .block .block-video .text-block {
+  .video .main-block-mob .reviews-swiper .swiper-slide .block-video .text-block {
     margin-top: 10px;
   }
-  .video .main-block-mob .block .block-video .text-block h1 {
+  .video .main-block-mob .reviews-swiper .swiper-slide .block-video .text-block h1 {
     font-size: 18px;
     font-weight: 600;
     margin: 0;
     padding-bottom: 10px;
   }
-  .video .main-block-mob .block .block-video .text-block p {
+  .video .main-block-mob .reviews-swiper .swiper-slide .block-video .text-block p {
     font-size: 14px;
     font-weight: 500;
     margin: 0;
     padding-bottom: 15px;
   }
-  .video .main-block-mob .block .block-video .text-block a {
+  .video .main-block-mob .reviews-swiper .swiper-slide .block-video .text-block a {
     font-size: 14px;
     font-weight: 600;
     color: #39B54A;
-  }
-  .video .main-block-mob {
-    /* кнопка как в ПК */
   }
   .video .main-block-mob .button {
     margin: 0;
@@ -2401,8 +2428,7 @@ button, input {
   }
   .video .main-block-mob .button button {
     width: 100%;
-    padding-bottom: 15px;
-    padding-top: 15px;
+    padding: 15px 0;
     background-color: #39B54A;
     color: white;
     font-size: 18px;
@@ -2504,6 +2530,10 @@ button, input {
   font-size: 16px;
   user-select: none;
 }
+.consultation .block-consult .form-container .style-font form .form-fields .sum .sum-inner .counter-label.active {
+  opacity: 1;
+  color: #000000;
+}
 .consultation .block-consult .form-container .style-font form .form-fields .checkbox-block-new {
   display: none;
 }
@@ -2527,7 +2557,6 @@ button, input {
 .consultation .block-consult .form-container .style-font form .form-footer .checkbox-block .checkbox-input {
   position: absolute;
   opacity: 0;
-  pointer-events: none;
 }
 .consultation .block-consult .form-container .style-font form .form-footer .checkbox-block .checkbox-custom {
   width: 28px;
@@ -2556,6 +2585,7 @@ button, input {
 .consultation .block-consult .form-container .style-font form .form-footer .checkbox-block .checkbox-text {
   color: #ffffff;
   font-size: 14px;
+  padding-left: 10px;
 }
 .consultation .block-consult .form-container .style-font form .form-footer .btn button {
   height: 51px;
@@ -6052,7 +6082,7 @@ html.popup-open::before, body.popup-open::before {
   width: 28px;
   height: 28px;
   border: 1px solid rgba(40, 40, 40, 0.1019607843);
-  background-color: #39B54A;
+  background-color: rgba(40, 40, 40, 0.0509803922);
   border-radius: 4px;
   position: relative;
   cursor: pointer;
@@ -6073,6 +6103,10 @@ html.popup-open::before, body.popup-open::before {
   font-size: 14px;
   color: #282828;
   text-decoration: underline;
+}
+#popup-block .block .block-form form .form-footer .checkbox-block .checkbox-input:checked + .checkbox-custom {
+  background-color: #39B54A;
+  border-color: #39B54A;
 }
 #popup-block .block .block-form form .form-footer .btn button {
   width: 75%;

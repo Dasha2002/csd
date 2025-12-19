@@ -296,51 +296,85 @@
       .block-two { display: none !important; }
 
       .block-two-mobile {
-        display: block !important;
-        margin-top: 20px;
+  position: relative;
+  overflow: hidden;
+  display: block;
+  padding-top: 15px;
 
-        .carousel-track {
-          display: flex;
-          gap: 15px;
-          padding-bottom: 10px;
-          transition: transform 0.3s, box-shadow 0.3s;
-          height: 17vh;
+  .services-swiper {
+    width: 100%;
+    overflow: hidden;
+  }
 
-          .block-3-second-row, .block-4-second-row, .block-5-second-row {
-            padding: 20px;
-          }
-          > div {
-            min-width: 93%;
-            padding: 20px;
-            border-radius: 15px;
-            
+  .swiper-wrapper {
+    display: flex;
+  }
 
-            a { text-decoration: none; color: inherit; display: block; }
-            img { width: 50px; height: 50px; margin-bottom: 10px; }
-            h2  { 
-              font-size: 5vw; 
-              color: #fff;
-              font-weight: 600;
-              margin: 0;
-              text-decoration: none;
-            }
-          }
+  .swiper-slide {
+    width: calc(100% - 30px); 
+    flex-shrink: 0;
+    
+  }
 
-          .block-3-second-row { background: #39B54A; }
-          .block-4-second-row { background: #0071BC; }
-          .block-5-second-row { background: #39B54A; }
-        }
+  /* ВАЖНО: стили применяются к твоим блокам */
+  .swiper-slide > div {
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: flex-start;
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 100%;   
+    height: 140px;        
+    box-sizing: border-box;
 
-        .carousel-indicators {
-          display: flex;
-          justify-content: center;
-          margin-top: 12px;
-          gap: 8px;
+    a {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
 
-          .dot { width: 20px; height: 20px; border-radius: 50%; background: #ccc; }
-          .dot.active { background: #39B54A; }
-        }
+    img {
+      width: 45px;
+      height: 45px;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 30px;
+      color: #fff;
+      text-align: left;
+      margin: 0;
+      font-weight: 600;
+    }
+  }
+
+  /* Цвета — как раньше */
+  .swiper-slide:nth-child(1) > div { background-color: #39B54A; }
+  .swiper-slide:nth-child(2) > div { background-color: #0071BC; }
+  .swiper-slide:nth-child(3) > div { background-color: #39B54A; }
+
+  /* ТВОИ точки */
+  .carousel-indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    gap: 10px;
+
+    .dot {
+      width: 17px;
+      height: 17px;
+      border-radius: 50%;
+      background-color: #ccc;
+      cursor: pointer;
+
+      &.active {
+        background-color: #39B54A;
       }
+    }
+  }
+}
     } 
   } 
 } 
@@ -584,61 +618,84 @@
       .block-two { display: none; }
 
       .block-two-mobile {
-        position: relative;
-        overflow: hidden;
-        display: block;
-        padding-top: 15px;
+  position: relative;
+  overflow: hidden;
+  display: block;
+  padding-top: 15px;
 
-        .carousel-track {
-          display: flex;
-          gap: 10px;
-          transition: transform 0.5s ease;
-        }
+  .services-swiper {
+    width: 100%;
+    overflow: hidden;
+  }
 
-        .carousel-track > div {
-          border-radius: 15px;
-          display: flex;
-          flex-direction: column;
-          align-items: start;
-          justify-content: flex-start;
-          padding: 20px;
-          transition: transform 0.3s, box-shadow 0.3s;
-          min-width: 320px;
+  .swiper-wrapper {
+    display: flex;
+  }
 
-          a { text-decoration: none; color: inherit; display: block; }
+  .swiper-slide {
+    width: calc(100% - 30px); // 👈 первый блок чуть уже
+    flex-shrink: 0;
+  }
 
-          img { width: 40px; height: 40px; margin-bottom: 10px; }
+  /* ВАЖНО: стили применяются к твоим блокам */
+  .swiper-slide > div {
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: flex-start;
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 100%;           // 🔥 вместо min-width
+    box-sizing: border-box;
 
-          h2 {
-            font-size: 20px;
-            color: #fff;
-            text-align: left;
-            margin: 0;
-            font-weight: 600;
-          }
+    a {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
 
-          &:nth-child(1) { background-color: #39B54A; }
-          &:nth-child(2) { background-color: #0071BC; }
-          &:nth-child(3) { background-color: #39B54A; }
-        }
+    img {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 10px;
+    }
 
-        .carousel-indicators {
-          display: flex;
-          justify-content: center;
-          margin-top: 15px;
-          gap: 10px;
+    h2 {
+      font-size: 20px;
+      color: #fff;
+      text-align: left;
+      margin: 0;
+      font-weight: 600;
+    }
+  }
 
-          .dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background-color: #ccc;
-            cursor: pointer;
+  /* Цвета — как раньше */
+  .swiper-slide:nth-child(1) > div { background-color: #39B54A; }
+  .swiper-slide:nth-child(2) > div { background-color: #0071BC; }
+  .swiper-slide:nth-child(3) > div { background-color: #39B54A; }
 
-            &.active { background-color: #39B54A; }
-          }
-        }
-      } 
+  /* ТВОИ точки */
+  .carousel-indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    gap: 10px;
+
+    .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: #ccc;
+      cursor: pointer;
+
+      &.active {
+        background-color: #39B54A;
+      }
+    }
+  }
+}
+
     } 
   } 
 } 

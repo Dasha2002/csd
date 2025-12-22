@@ -244,5 +244,49 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+// articles-2 скрытие и раскрытие текста 
+
+// JS: Swiper + Read More
+document.addEventListener("DOMContentLoaded", function () {
+
+  // Swiper
+  const swiper = new Swiper(".articles-swiper", {
+    slidesPerView: 3,
+    spaceBetween: 20,
+    loop: false,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      600: {
+        slidesPerView: 2,
+      },
+      900: {
+        slidesPerView: 3,
+      },
+    },
+  });
+
+  // Read More
+  document.querySelectorAll('.read-more-btn').forEach(button => {
+    button.addEventListener('click', () => {
+      const card = button.closest('.article-card');
+      card.classList.toggle('is-open');
+
+      button.textContent = card.classList.contains('is-open') ? 'Свернуть' : 'Читать полностью';
+    });
+  });
+
+});
+
+
 
 

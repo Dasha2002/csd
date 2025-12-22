@@ -88,12 +88,12 @@
                 <div class="form-fields">
 
                     <div class="name">
-                        <label for="name"></label>
-                        <input type="text" name="name" placeholder="Имя" id="name" required>
+                        <label for="name-mob"></label>
+                        <input type="text" name="name" placeholder="Имя" id="name-mob" required>
                     </div>
                     <div class="phone">
-                        <label for="phone"></label>
-                        <input type="tel" name="phone" placeholder="+7 (999) 999-99-99" id="phone" maxlength="21" required>
+                        <label for="phone-mob"></label>
+                        <input type="tel" name="phone" placeholder="+7 (999) 999-99-99" id="phone-mob" maxlength="21" required>
                     </div>
                     <div class="sum">
                         <div class="sum-inner">
@@ -111,9 +111,10 @@
                         <label class="checkbox-wrapper">
                             <input type="checkbox" class="checkbox-input" id="data-consent">
                             <span class="checkbox-custom"></span>
+                            <span class="checkbox-text">Даю согласие на обработку персональных данных</span>
                         </label>
 
-                        <span class="checkbox-text">Даю согласие на обработку персональных данных</span>
+
                     </div>
 
                 </div>
@@ -123,9 +124,10 @@
                         <label class="checkbox-wrapper">
                             <input type="checkbox" class="checkbox-input" id="data-consent">
                             <span class="checkbox-custom"></span>
+                            <span class="checkbox-text">Даю согласие на обработку персональных данных</span>
                         </label>
 
-                        <span class="checkbox-text">Даю согласие на обработку персональных данных</span>
+                        
                     </div>
 
                     <div class="btn">

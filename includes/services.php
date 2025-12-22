@@ -196,7 +196,6 @@
                 </div>
             </div>
 
-            <!-- ТВОИ точки -->
             <div class="carousel-indicators">
                 <span class="dot active" data-index="0"></span>
                 <span class="dot" data-index="1"></span>

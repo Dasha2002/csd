@@ -118,19 +118,55 @@
                     padding-bottom: 15px;
                 }
                 p {
-                    font-size: 2vw;
+                    font-size: 2.7vw;
                 }
             }
             .block-2 {
                 h2 {
-                    font-size: 2.5vw;
+                    font-size: 2.7vw;
                 }
                 p {
-                    font-size: 2vw;
+                    font-size: 2.3vw;
                 }
                 .btn {
                     a {
-                        font-size: 2vw;
+                        font-size: 2.2vw;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .article-1 {
+        padding: 20px 15px 40px;
+        .block-article {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            .block-1 {
+                h1 {
+                    font-size: 32px;
+                    font-weight: 500;
+                    padding-bottom: 15px;
+                }
+                p {
+                    font-size: 16px;
+                }
+            }
+            .block-2 {
+                padding: 20px;
+                h2 {
+                    font-size: 18px;
+                    padding-bottom: 15px;
+                }
+                p {
+                    font-size: 16px;
+                }
+                .btn {
+                    a {
+                        font-size: 16px;
                     }
                 }
             }

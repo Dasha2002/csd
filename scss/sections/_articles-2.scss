@@ -1,4 +1,5 @@
 .articles-2 {
+    padding: 0;
 .knowledge-base {
     padding: 0;
     margin: 0;
@@ -81,14 +82,16 @@
                border-radius: 15px;
                padding: 20px;
 
-               h3 {
+               .article-content {
+                h3 {
                 padding: 0;
-                padding-top: 20px;
                 margin: 0;
                 font-size: 22px;
                 font-weight: 600;
                 
                }
+               }
+               
 
                .article-subtitle {
                 padding: 0;
@@ -97,12 +100,18 @@
                 font-weight: 600;
                }
 
+               .article-text {
+                padding-top: 15px;
+                .article-excerpt {
+                    font-size: 18px;
+                }
+               }
+
                .read-more-btn{
                     background: none;
                     border: none;
                     padding: 0;
-                    padding-top: 25px;
-                    padding-bottom: 32px;
+                    padding-bottom: 10px;
                     margin: 0;
                     font: inherit;
                     font-size: 16px;
@@ -113,6 +122,10 @@
                     display: inline;
                }
             }
+        }
+
+        .articles-grid-mob {
+            display: none;
         }
 
     }
@@ -145,12 +158,12 @@
                             .article-excerpt {
                                 font-size: 1.3vw;
                                 margin: 0;
-                                padding-top: 15px;
+                                padding-top: 0;
                             }
                         }
 
                         .read-more-btn {
-                            padding: 15px 0 0 0;
+                            padding: 0;
                         }
                     }
                 }
@@ -165,26 +178,42 @@
             .container {
                 padding-top: 40px;
 
+                .search-section {
+                padding-bottom: 20px;
+            }
+
                 .articles-grid {
+                    display: none;
+                }
+                .articles-grid-mob {
                     display: grid;
                     grid-template-columns: repeat(2, 1fr);
                     gap: 20px;
 
                     .article-card {
                         height: auto;
+                        padding: 20px;
+                        width: 100%;
+                        box-sizing: border-box;
                         .article-content {
                             .article-title {
                                 font-size: 3vw;
+                                margin: 0;
+                                padding: 0;
+                                font-weight: 600;
                             }
                             .article-subtitle {
                                 font-size: 2vw;
                                 padding-top: 5px;
+                                padding-bottom: 15px;
+                                margin: 0;
+                                font-weight: 600;
                             }
                             .article-excerpt {
                                 font-size: 1.8vw;
                                 margin: 0;
-                                padding-top: 10px;
-                                padding-bottom: 10px;
+                                margin-bottom: 0;
+                                padding-bottom: 25px;
                             }
                         }
 
@@ -210,22 +239,40 @@
         .container {
             padding: 34px 20px 30px;
 
+            .search-section {
+                padding-bottom: 20px;
+            }
+
             .articles-grid {
+                    display: none;
+                }
+
+            .articles-grid-mob {
                 display: grid;
                 grid-template-columns: 1fr;
                 gap: 20px;
                 .article-card {
                     height: auto;
+                    padding: 20px;
+                    width: 100%;
+                    box-sizing: border-box;
                     .article-content {
                         .article-title {
                             font-size: 22px;
-                            padding-bottom: 5px;
+                            padding: 0;
+                            margin: 0;
+                            font-weight: 600;
                         }
                         .article-subtitle {
                             font-size: 18px;
+                            margin: 0;
+                            font-weight: 600;
+                            padding-bottom: 15px;
                         }
                         .article-excerpt {
                             font-size: 20px;
+                            margin-bottom: 0;
+                            padding-bottom: 25px;
                         }
                     }
                     .read-more-btn {
@@ -253,22 +300,41 @@
         .container {
             padding: 34px 20px 30px;
 
+            .search-section {
+                padding-bottom: 20px;
+            }
+
             .articles-grid {
+                    display: none;
+                }
+
+            .articles-grid-mob {
                 display: grid;
                 grid-template-columns: 1fr;
                 gap: 20px;
                 .article-card {
                     height: auto;
+                    padding: 20px;
+                    width: 100%;
+                    box-sizing: border-box;
                     .article-content {
                         .article-title {
                             font-size: 18px;
-                            
+                            padding: 0;
+                            margin: 0;
+                            font-weight: 600;
                         }
                         .article-subtitle {
                             font-size: 18px;
+                            margin: 0;
+                            font-weight: 600;
+                            padding-bottom: 0;
                         }
                         .article-excerpt {
-                            font-size: 15px;
+                            font-size: 16px;
+                            margin-top: 15px;
+                            margin-bottom: 0;
+                            padding-bottom: 25px;
                         }
                     }
                     .read-more-btn {
@@ -287,4 +353,120 @@
     }
     }
     
+}
+
+@media (max-width: 900px) {
+
+  .articles-2 {
+
+    .article-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 15px;
+      background: #fff;
+    }
+
+    /* контейнер с текстом */
+    .article-text {
+      position: relative;
+      max-height: 130px; // 2.5–3 строки
+      overflow: hidden;
+  transition: 
+    max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* эффект "выглядывающей строки" */
+    .article-text::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 30px;
+      background: white;
+      pointer-events: none;
+    }
+
+    /* раскрытое состояние */
+    .article-card.is-open {
+
+      .article-text {
+        max-height: 1000px;
+      }
+
+      .article-text::after {
+        display: none;
+      }
+    }
+
+    /* кнопка */
+    .read-more-btn {
+      background: none;
+      border: none;
+      padding-top: 14px;
+      font-size: 16px;
+      color: #39B54A;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+}
+
+
+@media (min-width: 900px) {
+
+  .articles-2 {
+
+    .article-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 15px;
+      background: #fff;
+      height: auto !important;
+    }
+
+    /* контейнер с текстом */
+    .article-text {
+      position: relative;
+      max-height: 121px; // 2.5–3 строки
+      overflow: hidden;
+      transition: 
+      max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* эффект "выглядывающей строки" */
+    .article-text::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 30px;
+      background: white;
+      pointer-events: none;
+    }
+
+    /* раскрытое состояние */
+    .article-card.is-open {
+
+      .article-text {
+        max-height: 1000px;
+      }
+
+      .article-text::after {
+        display: none;
+      }
+    }
+
+    /* кнопка */
+    .read-more-btn {
+      background: none;
+      border: none;
+      padding-top: 14px;
+      font-size: 16px;
+      color: #39B54A;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
 }

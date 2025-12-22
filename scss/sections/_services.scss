@@ -1,13 +1,14 @@
 
 
 .services {
-  padding: 40px;
+  padding:  0 40px 40px;
 
   .block {
     h1 {
       text-align: center;
       font-size: 48px;
       margin-bottom: 40px;
+      margin-top: 0;
     }
     .bloc-one {
       display: grid;
@@ -21,7 +22,7 @@
         overflow: hidden;
         height: 325px;
         background-image: url('/assets/img/services-main-one.svg');
-        background-size: cover;
+        background-size: contain;
         background-repeat: no-repeat;
         background-position: left center;
 
@@ -49,17 +50,21 @@
           max-width: 400px;
           text-align: left;
           color: #fff;
+          
 
           h2 {
             font-size: 26px;
             font-weight: 700;
             margin-bottom: 15px;
+            
           }
 
           p {
-            font-size: 18px;
+            
+            font-size: 20px;
             line-height: 1.4;
             margin-bottom: 25px;
+            
           }
 
           .mob-p {
@@ -70,8 +75,8 @@
 
         .btn-overlay {
           position: absolute;
-          right: 0;
-          bottom: 0;
+          right: 101px;
+          bottom: 62px;
           display: flex;
           gap: 10px;
           z-index: 3;
@@ -91,18 +96,23 @@
 
       .block-2-first-row {
         position: relative;
+        height: 325px;
+        display: flex;
+        align-items: flex-end;
         border-radius: 15px;
         overflow: hidden;
-        height: 325px;
+        
         cursor: pointer;
         background-image: url('/assets/img/main-services-two.svg');
-        background-size: contain;
+        background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
 
-        .block {
-          padding: 124px 40px 50px 40px;
-          
+        a {
+          text-decoration: none;
+          .block {
+          padding: 40px;
+          position: relative;
           z-index: 3;
 
 
@@ -112,10 +122,14 @@
 
           h2 {
             color: #fff;
-            font-size: 26px !important;
+            font-size: 26px;
             margin: 0;
+            text-decoration: none;
+            padding-top: 10px;
           }
         }
+        }
+        
 
         .overlay-img {
           img {
@@ -123,6 +137,12 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            position: absolute;
+            bottom: 0;
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+    
           }
         }
       } 
@@ -139,21 +159,47 @@
       gap: 20px;
       padding-top: 20px;
 
-      
       > div {
         border-radius: 12px;
-        padding: 18px;
-        display: flex;
-        align-items: flex-start;
-        gap: 12px;
+        overflow: hidden; // важно для клика
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
 
-        img { width: 40px; height: 40px; }
-        h2 {
-          font-size: 18px;
-          margin: 0;
+        a {
+          display: flex;
+          height: 100%;
+          width: 100%;
+          text-decoration: none;
+          color: #fff;
+
+        > div {
+          padding: 40px;
+          display: flex;
+          align-items: flex-start;
+          flex-direction: column;
+          gap: 12px;
+          width: 100%;
+          height: 100%;
         }
       }
+
+      img {
+        width: 48px;
+        height: 48px;
+        flex-shrink: 0;
+      }
+
+      h2 {
+        font-size: 26px;
+        margin: 0;
+        line-height: 1.3;
+      }
+
     }
+
+  > div:nth-child(odd)  { background-color: #39B54A; }
+  > div:nth-child(even) { background-color: #0071BC; }
+}
+
 
     .block-two-mobile {
       display: none;
@@ -162,13 +208,118 @@
 } 
 
 
-
-/* Мини-планшеты: 500–900px */
-@media screen and (min-width: 500px) and (max-width: 900px) {
+@media screen and (min-width: 900px) and (max-width: 1124px) {
   .services {
-    padding: 40px !important;
+    padding: 20px !important;
 
     .block {
+      h1 { text-align: center; }
+
+      .bloc-one {
+        grid-template-columns: 1.4fr 0.9fr;
+        gap: 20px;
+
+        .block-1-first-row {
+          background-size: cover !important;
+
+          .overlay-img { display: none; }
+
+          .gradient {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, rgba(31, 175, 56, 0), #1FAF38 70%);
+            border-radius: 15px;
+            display: block;
+            z-index: 2;
+          }
+
+          .text-overlay {
+            position: absolute;
+            top: 30px;
+            right: 20px;
+            z-index: 3;
+            max-width: 300px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            text-align: right;
+
+            h2 {
+              font-size: 20px !important;
+              margin: 0 0 12px 0;
+            }
+
+            .mob-p {
+              display: block;
+              font-size: 15px !important;
+              margin: 0;
+              line-height: 1.4;
+            }
+
+            p { display: none; }
+          }
+
+          .btn-overlay {
+            position: absolute;
+            right: 20px;
+            bottom: 30px;
+            z-index: 3;
+
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 10px;
+
+            .btn-application,
+            .btn-detail {
+              padding: 12px 18px;
+              font-size: 16px;
+              width: auto;
+            }
+          }
+        }
+
+        .block-2-first-row {
+          height: 325px;
+
+          a {
+            .block {
+            padding-top: 145px !important;
+
+            h2 {
+              font-size: 2.7vw;
+            }
+          }
+          }
+          
+        }
+      }
+
+      .block-two {
+        grid-auto-rows: 170px;
+        gap: 15px;
+
+        > div h2 {
+          font-size: 2.2vw;
+        }
+        > div img {
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+  }
+}
+
+
+/* Мини-планшеты: 500–900px */
+@media screen and (max-width: 900px) and (min-width: 500px) {
+  .services {
+    
+
+    .block {
+      padding: 40px 20px;
       h1 {
         font-size: 36px;
         margin-bottom: 25px;
@@ -184,6 +335,7 @@
         display: grid !important;
         grid-template-columns: 1fr;
         gap: 20px !important;
+        
 
         .block-1-first-row {
           position: relative;
@@ -260,7 +412,10 @@
           background-position: top;
           min-height: 260px;
 
-          .overlay-img {
+          a {
+
+            .overlay-img {
+              
             img {
               width: 100%;
               height: 100%;
@@ -286,10 +441,12 @@
             .img-blue-detail {
               width: 55px;
               position: absolute;
-              bottom: 110%;
-              left: 0;
+              bottom: 90%;
+              left: 22px;
             }
           }
+          }
+          
         } 
       } 
 
@@ -380,97 +537,6 @@
 } 
 
 
-/* Планшеты: 900–1024px */
-@media screen and (min-width: 900px) and (max-width: 1024px) {
-  .services {
-    padding: 20px !important;
-
-    .block {
-      h1 { text-align: center; }
-
-      .bloc-one {
-        display: grid;
-        grid-template-columns: 1.4fr 0.9fr;
-        gap: 20px;
-
-        .block-1-first-row {
-          background-size: cover !important;
-
-          .overlay-img {
-            display: none ;
-          }
-
-          .gradient {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, rgba(31, 175, 56, 0), #1FAF38 70%);
-            border-radius: 15px;
-            display: block;
-            z-index: 2;
-          }
-          .text-overlay {
-            top: 30px;
-            right: 0 !important;
-            padding-right: 20px;
-
-            h2 { 
-              font-size: 20px !important;
-              margin: 0;
-              text-align: right;
-             }
-            .mob-p  { 
-              display: block;
-              font-size: 15px !important;
-              margin: 0;
-              text-align: right;
-             }
-
-             p {
-              display: none;
-             }
-          }
-
-          .btn-overlay {
-          padding:  10px 20px 40px !important;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            justify-content: flex-end;
-
-            .btn-application,
-            .btn-detail {
-              width: auto;
-              padding: 12px 18px;
-              font-size: 16px;
-            }
-          }
-        }
-
-        .block-2-first-row {
-          height: 300px;
-          background-position: left !important;
-          .block {
-            padding-top: 145px !important;
-            
-            h2 { 
-              font-size: 20px !important; 
-            }
-          }
-        }
-      } 
-
-      .block-two {
-        grid-template-columns: repeat(3, 1fr);
-        grid-auto-rows: 170px;
-        gap: 15px;
-
-        > div { h2 { font-size: 22px; } }
-      }
-    } 
-  } 
-} 
-
 
 /* Мобильная версия: до 500px (включая отдельные корректировки для <390px) */
 @media screen and (max-width: 500px) {
@@ -491,7 +557,7 @@
   }
 
   body .services {
-    padding: 40px 15px;
+    padding: 40px 15px !important;
     margin: 0;
 
     .block {
@@ -633,7 +699,7 @@
   }
 
   .swiper-slide {
-    width: calc(100% - 30px); // 👈 первый блок чуть уже
+    width: calc(100% - 30px); 
     flex-shrink: 0;
   }
 
@@ -646,7 +712,7 @@
     justify-content: flex-start;
     padding: 20px;
     transition: transform 0.3s, box-shadow 0.3s;
-    width: 100%;           // 🔥 вместо min-width
+    width: 100%;           
     box-sizing: border-box;
 
     a {

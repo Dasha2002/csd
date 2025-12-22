@@ -1,6 +1,10 @@
 <section class="services">
     <div class="conteiner">
 
+        <div class="img-mob">
+            <img src="/assets/img/Group-service.svg">
+        </div>
+
         <div class="conteiner-text">
             <p class="text-one">Центр по списанию долгов</p>
             <h1>Наши услуги</h1>
@@ -23,6 +27,8 @@
             </div>
 
         </div>
-        
+
+
+
     </div>
 </section>

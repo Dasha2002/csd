@@ -96,14 +96,11 @@
                                 }
             
                                 .counter-label {
-                                    color: #282828;
-                                    opacity: 40%;
                                     font-size: 16px;
-                                    user-select: none;         
-                                }
-                                .counter-label.active {
-                                    opacity: 1;
-                                    color: #000000;
+                                    color: #282828;
+                                    opacity: 0.4;
+                                    user-select: none;
+                                    text-align: center;
                                 }
                             }
                         }
@@ -232,6 +229,7 @@
                                     .counter-label {
                                         text-align: center;
                                     }
+                                    
                                 }
                             }
                             
@@ -268,6 +266,7 @@
                                     .counter-label {
                                         text-align: center;
                                     }
+                                    
                                 }
                             }
                             .checkbox-block-new {
@@ -276,8 +275,7 @@
                             gap: 10px;
 
                             .checkbox-wrapper {
-                                width: 28px;
-                                height: 28px;
+                                
                                 position: relative;
 
                                 display: flex;
@@ -298,6 +296,7 @@
                                 background-color: rgba(255, 255, 255, 0.3);
                                 border-radius: 4px;
                                 position: relative;
+                                margin-right: 10px;
 
                                 &::after {
                                     content: "";
@@ -354,7 +353,6 @@
             display: none !important;
         }
 
-       
         .block-consult-mob {
             padding: 40px 20px;
             margin-bottom: 40px;
@@ -363,7 +361,6 @@
             position: relative;
             background: linear-gradient(165.9deg, #39B54A 24.23%, #194F20 85.46%), #39B54A;
             border-radius: 20px;
-
 
             .img {
                 position: absolute;
@@ -420,13 +417,11 @@
                 form {
                     width: 100%;
 
-    
                     .form-fields {
                         display: grid;
                         grid-template-columns: 1fr 1fr;
                         gap: 20px;
 
-                        
                         .name,
                         .phone {
                             width: 100%;
@@ -485,19 +480,25 @@
                                     color: #282828;
                                     opacity: .4;
                                     font-size: 16px;
+                                    user-select: none;
+                                    text-align: center;
+                                }
+                                
+                                /* Добавляем стили для активного состояния */
+                                .counter-label.active {
+                                    color: #000000 !important;
+                                    opacity: 1 !important;
                                 }
                             }
                         }
 
                         .two {
-                                
                             display: flex;
                             align-items: center;
                             gap: 10px;
 
                             .checkbox-wrapper {
-                                width: 28px;
-                                height: 28px;
+                               
                                 position: relative;
 
                                 display: flex;
@@ -518,6 +519,7 @@
                                 background-color: rgba(255, 255, 255, 0.3);
                                 border-radius: 4px;
                                 position: relative;
+                                margin-right: 10px;
 
                                 &::after {
                                     content: "";
@@ -540,10 +542,9 @@
 
                             .checkbox-text {
                                 color: #ffffff;
-                                font-size: 14px;
+                                font-size: 1.7vw;
                             }
                         }
-                        
                     }
 
                     /* --- НИЖНИЙ БЛОК ФОРМЫ --- */
@@ -553,7 +554,6 @@
                         flex-direction: column;
                         gap: 20px;
 
-                        
                         .checkbox-block {
                             display: none;
                         }
@@ -576,14 +576,13 @@
 }
 
 @media screen and (max-width: 600px) and (min-width: 500px) {
-     .consultation {
+    .consultation {
         padding: 0 20px;
 
         .block-consult {
             display: none !important;
         }
 
-       
         .block-consult-mob {
             padding: 40px 20px;
             margin-bottom: 40px;
@@ -651,13 +650,11 @@
                 form {
                     width: 100%;
 
-    
                     .form-fields {
                         display: flex;
                         flex-direction: column;
                         gap: 15px;
 
-                        
                         .name,
                         .phone {
                             width: 100%;
@@ -716,6 +713,14 @@
                                     color: #282828;
                                     opacity: .4;
                                     font-size: 16px;
+                                    user-select: none;
+                                    text-align: center;
+                                }
+                                
+                                /* Добавляем стили для активного состояния */
+                                .counter-label.active {
+                                    color: #000000 !important;
+                                    opacity: 1 !important;
                                 }
                             }
                         }
@@ -732,20 +737,20 @@
                         flex-direction: column;
                         gap: 20px;
 
-                        
                         .checkbox-block {
                             display: flex;
                             align-items: center;
                             gap: 10px;
 
                             .checkbox-wrapper {
-                                width: 28px;
-                                height: 28px;
+                                
                                 position: relative;
 
                                 display: flex;
                                 align-items: center;
                                 justify-content: center;
+
+                                
                             }
 
                             .checkbox-input {
@@ -761,6 +766,7 @@
                                 background-color: rgba(255, 255, 255, 0.3);
                                 border-radius: 4px;
                                 position: relative;
+                                margin-right: 10px;
 
                                 &::after {
                                     content: "";
@@ -812,7 +818,6 @@
             display: none !important;
         }
 
-       
         .block-consult-mob {
             padding: 40px 20px;
             margin-bottom: 40px;
@@ -879,13 +884,11 @@
                 form {
                     width: 100%;
 
-    
                     .form-fields {
                         display: flex;
                         flex-direction: column;
                         gap: 15px;
 
-                        
                         .name,
                         .phone {
                             width: 100%;
@@ -944,6 +947,14 @@
                                     color: #282828;
                                     opacity: .4;
                                     font-size: 16px;
+                                    user-select: none;
+                                    text-align: center;
+                                }
+                                
+                                /* Добавляем стили для активного состояния */
+                                .counter-label.active {
+                                    color: #000000 !important;
+                                    opacity: 1 !important;
                                 }
                             }
                         }
@@ -960,15 +971,13 @@
                         flex-direction: column;
                         gap: 20px;
 
-                        
                         .checkbox-block {
                             display: flex;
                             align-items: center;
                             gap: 10px;
 
                             .checkbox-wrapper {
-                                width: 28px;
-                                height: 28px;
+                                
                                 position: relative;
 
                                 display: flex;
@@ -989,6 +998,7 @@
                                 background-color: rgba(255, 255, 255, 0.3);
                                 border-radius: 4px;
                                 position: relative;
+                                margin-right: 10px;
 
                                 &::after {
                                     content: "";
@@ -1030,4 +1040,11 @@
             }
         }
     }
+}
+
+
+.consultation .sum-inner .counter-label.active,
+.consultation .block-consult-mob .sum-inner .counter-label.active {
+  color: #000000 !important;
+  opacity: 1 !important;
 }

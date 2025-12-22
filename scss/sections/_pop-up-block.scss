@@ -110,6 +110,10 @@ html.popup-open, body.popup-open {
                     font-size: 16px;
                     user-select: none;         
                 }
+                .counter-label.active {
+                  color: #000000 !important;
+                  opacity: 1 !important;
+                }
             }
         }
     }
@@ -217,3 +221,5 @@ html.popup-open, body.popup-open {
     
   }
 }
+
+

@@ -56,6 +56,9 @@
         </button>
     </div>
 
+    <div class="menu-overlay" id="menu-overlay"></div>
+
+
     <!-- Мобильное меню (скрыто по умолчанию) -->
     <div class="mobile-nav-container" id="mobile-nav">
         <nav class="mobile-nav">

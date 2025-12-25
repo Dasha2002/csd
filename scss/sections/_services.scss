@@ -1,9 +1,9 @@
 
-
 .services {
   padding:  0 40px 40px;
 
   .block {
+    padding: 0 40px 40px;
     h1 {
       text-align: center;
       font-size: 48px;
@@ -316,7 +316,6 @@
 /* Мини-планшеты: 500–900px */
 @media screen and (max-width: 900px) and (min-width: 500px) {
   .services {
-    
 
     .block {
       padding: 40px 20px;
@@ -561,6 +560,7 @@
     margin: 0;
 
     .block {
+      padding: 0 !important;
       h1 {
         font-size: 28px;
         margin: 0;

@@ -38,6 +38,10 @@
         grid-auto-flow: column;
         align-items: center;
         justify-content: space-between;
+        .icon-whatsapp, .icon-telegram {
+            width: 32px;
+            height: 32px;
+        }
 
         .contact-text {
             font-size: 14px;
@@ -159,6 +163,14 @@
 /* СТИЛИ ДЛЯ МОБИЛЬНЫХ УСТРОЙСТВ (ДО 768px) */
 
 @media screen and (max-width: 768px) {
+
+    body.menu-open {
+    overflow: hidden;
+  }
+  
+     body {
+    padding-top: 70px;
+  }
     /* Скрываем десктопные элементы */
     .header, 
     .nav {
@@ -172,7 +184,18 @@
         justify-content: space-between;
         padding: 10px 15px;
         background-color: #fff;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1100;
+        transition: transform 0.3s ease;
     }
+
+    /* Когда прячем хедер */
+  .mobile-header.hide {
+    transform: translateY(-100%);
+  }
 
     .mobile-nav-container {
         display: block;
@@ -186,16 +209,19 @@
 
     .mobile-social-icons {
         display: flex;
-        gap: 10.5px; /* <-- ИЗМЕНЕНИЕ ЗДЕСЬ */
+        gap: 10.5px; 
+        
     }
 
     .mobile-icon {
-        width: 24px;
-        height: 24px;
+        width: 32px;
+        height: 32px;
     }
 
     /* --- Остальные стили для бургер-меню и выдвижного меню остаются без изменений --- */
     .hamburger-menu {
+        position: relative;
+    z-index: 1200;
     display: flex; /* Оставляем flex для центрирования картинки */
     align-items: center;
     justify-content: center;
@@ -205,7 +231,8 @@
     border: none;
     cursor: pointer;
     padding: 0;
-    z-index: 1001;
+    
+    padding-right: 45px;
 }
 
 .hamburger-icon {
@@ -215,18 +242,31 @@
     transition: transform 0.3s ease; /* Плавная анимация, если захотите */
 }
 
+.menu-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0);
+    z-index: 999;
+    display: none;
+  }
+  .menu-overlay.active {
+    display: block;
+  }
+
     .mobile-nav-container {
         position: fixed;
         top: 0;
         right: -100%;
         width: 80%;
         max-width: 300px;
-        height: 100%;
+        
         background-color: #fff;
         box-shadow: -2px 0 5px rgba(0,0,0,0.1);
         transition: right 0.3s ease-in-out;
         z-index: 1000;
         padding-top: 60px;
+        overflow-y: auto;
+        height: 100vh;
     }
 
     .mobile-nav-container.active {

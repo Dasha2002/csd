@@ -51,6 +51,10 @@ button, input {
   align-items: center;
   justify-content: space-between;
 }
+.header-logo-icon .contact .icon-whatsapp, .header-logo-icon .contact .icon-telegram {
+  width: 32px;
+  height: 32px;
+}
 .header-logo-icon .contact .contact-text {
   font-size: 14px;
   color: #282828;
@@ -155,6 +159,12 @@ button, input {
 }
 /* СТИЛИ ДЛЯ МОБИЛЬНЫХ УСТРОЙСТВ (ДО 768px) */
 @media screen and (max-width: 768px) {
+  body.menu-open {
+    overflow: hidden;
+  }
+  body {
+    padding-top: 70px;
+  }
   /* Скрываем десктопные элементы */
   .header,
   .nav {
@@ -167,6 +177,16 @@ button, input {
     justify-content: space-between;
     padding: 10px 15px;
     background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1100;
+    transition: transform 0.3s ease;
+  }
+  /* Когда прячем хедер */
+  .mobile-header.hide {
+    transform: translateY(-100%);
   }
   .mobile-nav-container {
     display: block;
@@ -178,14 +198,16 @@ button, input {
   }
   .mobile-social-icons {
     display: flex;
-    gap: 10.5px; /* <-- ИЗМЕНЕНИЕ ЗДЕСЬ */
+    gap: 10.5px;
   }
   .mobile-icon {
-    width: 24px;
-    height: 24px;
+    width: 32px;
+    height: 32px;
   }
   /* --- Остальные стили для бургер-меню и выдвижного меню остаются без изменений --- */
   .hamburger-menu {
+    position: relative;
+    z-index: 1200;
     display: flex; /* Оставляем flex для центрирования картинки */
     align-items: center;
     justify-content: center;
@@ -195,7 +217,7 @@ button, input {
     border: none;
     cursor: pointer;
     padding: 0;
-    z-index: 1001;
+    padding-right: 45px;
   }
   .hamburger-icon {
     width: 24px; /* Размер иконки */
@@ -203,18 +225,29 @@ button, input {
     display: block; /* Убираем лишние отступы у картинки */
     transition: transform 0.3s ease; /* Плавная анимация, если захотите */
   }
+  .menu-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0);
+    z-index: 999;
+    display: none;
+  }
+  .menu-overlay.active {
+    display: block;
+  }
   .mobile-nav-container {
     position: fixed;
     top: 0;
     right: -100%;
     width: 80%;
     max-width: 300px;
-    height: 100%;
     background-color: #fff;
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
     transition: right 0.3s ease-in-out;
     z-index: 1000;
     padding-top: 60px;
+    overflow-y: auto;
+    height: 100vh;
   }
   .mobile-nav-container.active {
     right: 0;
@@ -537,6 +570,9 @@ button, input {
   }
 }
 .services {
+  padding: 0 40px 40px;
+}
+.services .block {
   padding: 0 40px 40px;
 }
 .services .block h1 {
@@ -1016,6 +1052,9 @@ button, input {
   body .services {
     padding: 40px 15px !important;
     margin: 0;
+  }
+  body .services .block {
+    padding: 0 !important;
   }
   body .services .block h1 {
     font-size: 28px;
@@ -6385,13 +6424,49 @@ section .container .block .block-section .section p {
   font-weight: 500;
   text-align: center;
 }
+.cases-1 .block-cases .mob {
+  display: none;
+}
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1000px) and (min-width: 600px) {
+  .cases-1 {
+    padding-bottom: 0;
+  }
   .cases-1 .block-cases h1 {
     font-size: 5.5vw;
   }
   .cases-1 .block-cases p {
     font-size: 1.7vw;
+  }
+  .cases-1 .block-cases .mob {
+    display: none;
+  }
+}
+@media screen and (max-width: 600px) and (min-width: 500px) {
+  .cases-1 .block-cases h1 {
+    font-size: 6.5vw;
+  }
+  .cases-1 .block-cases p {
+    display: none;
+  }
+  .cases-1 .block-cases .mob {
+    display: block;
+    font-size: 2.7vw;
+  }
+}
+@media screen and (max-width: 500px) {
+  .cases-1 {
+    padding: 20px 15px 40px;
+  }
+  .cases-1 .block-cases h1 {
+    font-size: 6.5vw;
+  }
+  .cases-1 .block-cases p {
+    display: none;
+  }
+  .cases-1 .block-cases .mob {
+    display: block;
+    font-size: 3.2vw;
   }
 }
 .text-4 {
@@ -6543,13 +6618,12 @@ section .container .block .block-section .section p {
 }
 @media screen and (max-width: 650px) and (min-width: 500px) {
   .cases-2 {
-    padding: 50px 20px;
+    padding: 0 20px 50px;
   }
   .cases-2 .block-2 .doc-block {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 15px;
-    padding-top: 40px;
   }
   .cases-2 .block-2 .doc-block .block .doc-img {
     height: 200px;
@@ -6566,6 +6640,35 @@ section .container .block .block-section .section p {
   }
   .cases-2 .block-2 .doc-block .block .text-block .text-num .text {
     font-size: 2vw;
+  }
+}
+@media screen and (max-width: 500px) {
+  .cases-2 {
+    padding: 0 20px 40px;
+  }
+  .cases-2 .block-2 .doc-block {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  .cases-2 .block-2 .doc-block .block .doc-img {
+    height: 270px;
+  }
+  .cases-2 .block-2 .doc-block .block .doc-img img {
+    padding: 220px 0 0 10px;
+    width: 55%;
+  }
+  .cases-2 .block-2 .doc-block .block .text-block .text-doc h2 {
+    font-size: 5.5vw;
+  }
+  .cases-2 .block-2 .doc-block .block .text-block .text-doc h3 {
+    font-size: 6.2vw;
+  }
+  .cases-2 .block-2 .doc-block .block .text-block .text-num {
+    padding-top: 10px;
+  }
+  .cases-2 .block-2 .doc-block .block .text-block .text-num .text {
+    font-size: 4vw;
   }
 }
 .text-5 {
@@ -6589,8 +6692,8 @@ section .container .block .block-section .section p {
   }
 }
 @media screen and (max-width: 700px) {
-  .text-5 .block-5 {
-    padding: 20px 40px 0 0 !important;
+  .text-5 {
+    padding: 20px 15px 0;
   }
   .text-5 .block-5 p {
     font-size: 4vw !important;
@@ -6639,7 +6742,7 @@ section .container .block .block-section .section p {
     font-size: 2vw;
   }
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 700px) and (min-width: 500px) {
   .reviws-1 .block-reviws .text-head {
     display: flex;
     flex-direction: column;
@@ -6656,6 +6759,28 @@ section .container .block .block-section .section p {
   }
   .reviws-1 .block-reviws .text p {
     font-size: 2.7vw;
+  }
+}
+@media screen and (max-width: 500px) {
+  .reviws-1 {
+    padding: 20px 20px 0;
+  }
+  .reviws-1 .block-reviws .text-head {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .reviws-1 .block-reviws .text-head h1 {
+    font-size: 8vw;
+  }
+  .reviws-1 .block-reviws .text-head h2 {
+    font-size: 5.7vw;
+  }
+  .reviws-1 .block-reviws .text {
+    padding: 0;
+  }
+  .reviws-1 .block-reviws .text p {
+    font-size: 3.5vw;
   }
 }
 .reviws-2 {
@@ -6706,9 +6831,18 @@ section .container .block .block-section .section p {
     grid-template-columns: 1fr 1fr;
   }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 600px) and (min-width: 500px) {
   .reviws-2 {
-    padding: 50px 60px;
+    padding: 50px 40px;
+  }
+  .reviws-2 .main-block {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 500px) {
+  .reviws-2 {
+    padding: 50px 20px;
   }
   .reviws-2 .main-block {
     display: grid;
